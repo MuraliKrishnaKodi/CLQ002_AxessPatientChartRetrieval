@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Button - My Account",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "lpMFe2os0ECgFZGB7gtr2A",
+  "Reference": "rYh6cYecTEitmrbdMA9QUg/lpMFe2os0ECgFZGB7gtr2A",
+  "ParentRef": "rYh6cYecTEitmrbdMA9QUg/C7POD5CzZ0mkfEvaahGDKA",
+  "Created": "2025-12-08T19:47:53.3013116Z",
+  "Updated": "2025-12-08T19:49:16.4131897Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

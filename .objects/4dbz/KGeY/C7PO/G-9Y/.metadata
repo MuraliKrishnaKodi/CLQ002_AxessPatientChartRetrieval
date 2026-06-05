@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Dropdown - Status Button",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "G-9YnL366EOeQ0HJc0DF1w",
+  "Reference": "rYh6cYecTEitmrbdMA9QUg/G-9YnL366EOeQ0HJc0DF1w",
+  "ParentRef": "rYh6cYecTEitmrbdMA9QUg/C7POD5CzZ0mkfEvaahGDKA",
+  "Created": "2025-12-09T15:16:13.5136032Z",
+  "Updated": "2025-12-09T15:20:51.5636171Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

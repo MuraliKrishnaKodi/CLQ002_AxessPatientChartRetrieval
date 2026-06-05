@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="LCgvWDPUOEGKpjMHtP9w5g" Reference="rYh6cYecTEitmrbdMA9QUg/Plxu-o31rkOGMKCg4X8LNg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="central.axxessweb.com/clinician" CVScreenId="0ed06b4a-9a79-41f1-b882-3f2b122aa76c" DesignTimeRectangle="1351, 347, 32, 32" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='BUTTON' aaname='*×*' /&gt;" Guid="7eae57df-bb4c-489e-8a41-a9d9074daad3" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*xxess*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None">
+      <imageRef attrName="InformativeScreenshot" originalValue="2feb455131748e0d5409c7b74b4254b4.png" xmlns="">06tENm7wi0U-wxV3VIPz2tA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

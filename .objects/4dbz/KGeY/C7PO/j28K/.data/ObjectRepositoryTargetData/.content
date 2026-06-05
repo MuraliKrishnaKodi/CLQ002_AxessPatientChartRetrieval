@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="tWof_wilN067-JsRrK1LRQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="agencycore9.axxessweb.com" DesignTimeRectangle="1187, 336, 32, 24" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='DIV' aaname='X' /&gt;" Guid="a4f7fda8-2a9b-400a-88a9-b1573c10ede3" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Axxess™ Technology Solutions - Agency Management Desktop' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="6e7f21ac429592c3ce0d148e6c2304b3.png" xmlns="">0A02CORRLLkKZuglWO_pqRQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

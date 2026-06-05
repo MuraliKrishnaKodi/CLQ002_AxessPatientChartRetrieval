@@ -1,0 +1,17 @@
+﻿{
+  "Name": "Progress Bar - Loading",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "0OpEB0AHqUqsehMFjQtwdQ",
+  "Reference": "rYh6cYecTEitmrbdMA9QUg/0OpEB0AHqUqsehMFjQtwdQ",
+  "ParentRef": "rYh6cYecTEitmrbdMA9QUg/C7POD5CzZ0mkfEvaahGDKA",
+  "Created": "2025-12-15T03:02:51.4914541Z",
+  "Updated": "2025-12-15T03:03:33.8604588Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.21.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

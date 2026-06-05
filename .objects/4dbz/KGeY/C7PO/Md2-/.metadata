@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Header - Quality Assurance",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "Md2-VN1PAUeGLU_TIBDXdw",
+  "Reference": "rYh6cYecTEitmrbdMA9QUg/Md2-VN1PAUeGLU_TIBDXdw",
+  "ParentRef": "rYh6cYecTEitmrbdMA9QUg/C7POD5CzZ0mkfEvaahGDKA",
+  "Created": "2025-12-10T10:02:56.9934939Z",
+  "Updated": "2025-12-10T10:38:49.5975191Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "exportedBy": null,
+  "bundleHash": null,
+  "version": "1.0.0.0",
+  "jitAssemblyCompilerCommands": [
+    {
+      "providerName": "TypedDataTable",
+      "typedDataTableDto": {
+        "id": 1,
+        "idRef": "NExtractDataGeneric`1_1",
+        "hash": "NExtractDataGeneric`1_1|DataTable|0JiTiYnry4R2Yhzc9Y2p1prJnEQlNNeSe7lMF4KBs5c",
+        "dataType": "System.Data.DataTable, System.Data.Common",
+        "columns": [
+          {
+            "columnName": "Column-0",
+            "dataType": "System.String, System.Private.CoreLib"
+          },
+          {
+            "columnName": "Patient Name Patient Name",
+            "dataType": "System.String, System.Private.CoreLib"
+          },
+          {
+            "columnName": "MRN MRN",
+            "dataType": "System.String, System.Private.CoreLib"
+          },
+          {
+            "columnName": "Event Date Event Date",
+            "dataType": "System.String, System.Private.CoreLib"
+          },
+          {
+            "columnName": "Column-4",
+            "dataType": "System.String, System.Private.CoreLib"
+          },
+          {
+            "columnName": "Task Task",
+            "dataType": "System.String, System.Private.CoreLib"
+          },
+          {
+            "columnName": "Status",
+            "dataType": "System.String, System.Private.CoreLib"
+          },
+          {
+            "columnName": "Tags",
+            "dataType": "System.String, System.Private.CoreLib"
+          },
+          {
+            "columnName": "Notes Notes",
+            "dataType": "System.String, System.Private.CoreLib"
+          },
+          {
+            "columnName": "Assigned To Assigned To",
+            "dataType": "System.String, System.Private.CoreLib"
+          }
+        ]
+      },
+      "entityAssemblyKey": {
+        "name": "Studio.Generated.TypedDataTable1",
+        "hash": "NExtractDataGeneric`1_1|DataTable|cjKfyo9jjPWuZBm1SFc4spiuIlE9TlpNgRDVRfh542Q",
+        "assemblyName": "Studio.Generated.TypedDataTable1"
+      }
+    }
+  ]
+}

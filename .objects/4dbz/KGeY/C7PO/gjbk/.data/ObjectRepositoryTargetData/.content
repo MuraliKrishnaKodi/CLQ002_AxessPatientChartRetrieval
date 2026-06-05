@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="TmxTczZfokaS0LqSloMszA" Reference="rYh6cYecTEitmrbdMA9QUg/gjbk7_0fBkmo2jQA4otVIw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="agencycore10.axxessweb.com" CVScreenId="05a60942-3afa-4291-8e4d-34622b34e0dd" DesignTimeRectangle="1488, 361, 127, 30" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='BUTTON' aaname='Export to Excel' /&gt;" Guid="ba14ec04-f5a1-449c-8b08-2a7c5a78795c" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Axxess™ Technology Solutions - Agency Management Desktop' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="29dd9e019dd3c934ba3b6084fa4d7d83.png" xmlns="">0g8oDSaI_Ik6d_AfQ8KZdJg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

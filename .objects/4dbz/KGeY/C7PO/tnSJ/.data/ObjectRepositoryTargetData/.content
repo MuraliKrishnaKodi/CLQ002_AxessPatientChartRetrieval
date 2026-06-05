@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="r5KFwfZ3Rk269florWC9XA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="agencycore8.axxessweb.com" CVScreenId="83fcb2cf-a0e0-4475-9ede-1e8f5060d71b" DesignTimeRectangle="494, 280, 182, 31" ElementType="Table" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='qac-input-group' tag='DIV' visibleinnertext='*All Tasks*' /&gt;" Guid="25e4ac8a-5347-4cd6-b435-e5ad33a11097" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Axxess™ Technology Solutions - Agency Management Desktop' /&gt;" SearchSteps="Selector" SelectionStrategy="AA" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="2078e39b19d3ae23d511fc1ff147f4d4.png" xmlns="">0Ho1fReRqkE2ALxhVQsa70w</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

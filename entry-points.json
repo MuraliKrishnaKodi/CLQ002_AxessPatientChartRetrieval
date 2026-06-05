@@ -1,0 +1,50 @@
+{
+  "$schema": "https://cloud.uipath.com/draft/2024-12/entry-point",
+  "entryPoints": [
+    {
+      "filePath": "Workflows\\Main.xaml",
+      "uniqueId": "eaf7f8f8-f422-4f57-8a1a-baeaebdb6a46",
+      "type": "process",
+      "input": {
+        "type": "object",
+        "properties": {
+          "in_OrchestratorQueueName": {
+            "type": "string",
+            "description": "Allows the Orchestrator queue name to be passed as an argument, instead of only being defined in the configuration file."
+          },
+          "in_OrchestratorQueueFolder": {
+            "type": "string",
+            "description": "Allows the Orchestrator folder name where the queue is created to be passed as an argument, instead of only being defined in the configuration file."
+          },
+          "in_StartTime": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The datetime from which the queue data should be pulled out for reporting. Default is when the process starts."
+          },
+          "in_EndTime": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The datetime to which the queue daa should be pulled out for reporting. Default is the current datetime of activity execution"
+          },
+          "in_boolLoadFreshItems": {
+            "type": "boolean",
+            "description": "This flag tells the automation whether it should load new items from the EMR file. It is useful when the bot needs to process items already present in the queue and no new items should be added.\n\nDefault is True (Fresh item will be added)",
+            "x-default-expression": "True",
+            "default": true
+          },
+          "in_IntAllocationNumber": {
+            "type": "integer",
+            "minimum": -2147483648,
+            "maximum": 2147483647
+          },
+          "in_boolFirstJobRun": {
+            "type": "boolean",
+            "x-default-expression": "False",
+            "default": false
+          }
+        },
+        "required": []
+      }
+    }
+  ]
+}

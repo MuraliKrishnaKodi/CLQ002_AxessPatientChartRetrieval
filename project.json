@@ -1,0 +1,185 @@
+{
+  "name": "CLQ002_AxessPatientChartRetrieval",
+  "projectId": "85e1d5b7-226b-4aad-8876-7d4d92a85cd4",
+  "description": "The process involves accessing the Axxess portal to retrieve and prepare task allocation reports. A final chart report is prepared by retaining only the OASIS-related records and removing all other task types. It then references the notes section to identify records marked as OASIS completed and removes their corresponding chart data , a summary chart report is generated to facilitate task allocation.",
+  "main": "Workflows\\Main.xaml",
+  "dependencies": {
+    "UiPath.Azure.Activities": "[1.7.2]",
+    "UiPath.Excel.Activities": "[3.3.1]",
+    "UiPath.MicrosoftOffice365.Activities": "[3.5.10]",
+    "UiPath.System.Activities.Runtime": "[25.10.4]",
+    "UiPath.Testing.Activities": "[25.10.0]",
+    "UiPath.UIAutomation.Activities.Runtime": "[25.10.21]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "26.0.181.0",
+  "projectVersion": "1.0.21",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "workflowSerialization": "NewtonsoftJson",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession",
+    "robotVersion": "26.0.189"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "saveToCloud": false
+  },
+  "arguments": {
+    "input": [
+      {
+        "name": "in_OrchestratorQueueName",
+        "displayName": "in_OrchestratorQueueName",
+        "tooltip": "Allows the Orchestrator queue name to be passed as an argument, instead of only being defined in the configuration file.",
+        "type": "System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
+        "required": false,
+        "hasDefault": false
+      },
+      {
+        "name": "in_OrchestratorQueueFolder",
+        "displayName": "in_OrchestratorQueueFolder",
+        "tooltip": "Allows the Orchestrator folder name where the queue is created to be passed as an argument, instead of only being defined in the configuration file.",
+        "type": "System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
+        "required": false,
+        "hasDefault": false
+      },
+      {
+        "name": "in_StartTime",
+        "displayName": "in_StartTime",
+        "tooltip": "The datetime from which the queue data should be pulled out for reporting. Default is when the process starts.",
+        "type": "System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
+        "required": false,
+        "hasDefault": false
+      },
+      {
+        "name": "in_EndTime",
+        "displayName": "in_EndTime",
+        "tooltip": "The datetime to which the queue daa should be pulled out for reporting. Default is the current datetime of activity execution",
+        "type": "System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
+        "required": false,
+        "hasDefault": false
+      },
+      {
+        "name": "in_boolLoadFreshItems",
+        "displayName": "in_boolLoadFreshItems",
+        "tooltip": "This flag tells the automation whether it should load new items from the EMR file. It is useful when the bot needs to process items already present in the queue and no new items should be added.\n\nDefault is True (Fresh item will be added)",
+        "type": "System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
+        "required": false,
+        "hasDefault": true,
+        "isExpression": false,
+        "defaultValue": "True"
+      },
+      {
+        "name": "in_IntAllocationNumber",
+        "displayName": "in_IntAllocationNumber",
+        "type": "System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
+        "required": false,
+        "hasDefault": false
+      },
+      {
+        "name": "in_boolFirstJobRun",
+        "displayName": "in_boolFirstJobRun",
+        "type": "System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
+        "required": false,
+        "hasDefault": true,
+        "isExpression": false,
+        "defaultValue": "False"
+      }
+    ],
+    "output": []
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Workflows\\Main.xaml",
+      "uniqueId": "eaf7f8f8-f422-4f57-8a1a-baeaebdb6a46",
+      "input": [
+        {
+          "name": "in_OrchestratorQueueName",
+          "displayName": "in_OrchestratorQueueName",
+          "tooltip": "Allows the Orchestrator queue name to be passed as an argument, instead of only being defined in the configuration file.",
+          "type": "System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
+          "required": false,
+          "hasDefault": false
+        },
+        {
+          "name": "in_OrchestratorQueueFolder",
+          "displayName": "in_OrchestratorQueueFolder",
+          "tooltip": "Allows the Orchestrator folder name where the queue is created to be passed as an argument, instead of only being defined in the configuration file.",
+          "type": "System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
+          "required": false,
+          "hasDefault": false
+        },
+        {
+          "name": "in_StartTime",
+          "displayName": "in_StartTime",
+          "tooltip": "The datetime from which the queue data should be pulled out for reporting. Default is when the process starts.",
+          "type": "System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
+          "required": false,
+          "hasDefault": false
+        },
+        {
+          "name": "in_EndTime",
+          "displayName": "in_EndTime",
+          "tooltip": "The datetime to which the queue daa should be pulled out for reporting. Default is the current datetime of activity execution",
+          "type": "System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
+          "required": false,
+          "hasDefault": false
+        },
+        {
+          "name": "in_boolLoadFreshItems",
+          "displayName": "in_boolLoadFreshItems",
+          "tooltip": "This flag tells the automation whether it should load new items from the EMR file. It is useful when the bot needs to process items already present in the queue and no new items should be added.\n\nDefault is True (Fresh item will be added)",
+          "type": "System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
+          "required": false,
+          "hasDefault": true,
+          "isExpression": false,
+          "defaultValue": "True"
+        },
+        {
+          "name": "in_IntAllocationNumber",
+          "displayName": "in_IntAllocationNumber",
+          "type": "System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
+          "required": false,
+          "hasDefault": false
+        },
+        {
+          "name": "in_boolFirstJobRun",
+          "displayName": "in_boolFirstJobRun",
+          "type": "System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
+          "required": false,
+          "hasDefault": true,
+          "isExpression": false,
+          "defaultValue": "False"
+        }
+      ],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Windows"
+}

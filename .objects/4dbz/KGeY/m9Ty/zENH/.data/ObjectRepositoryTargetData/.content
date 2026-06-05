@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="jID1pDyjiEK6HgueP41BpA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="identity.axxessweb.com/login" CVScreenId="b96002ac-c3e9-4712-84b4-52d2f5fa6f9e" DesignTimeRectangle="1068, 651, 171, 35" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='BUTTON' aaname='*Secure Login*' /&gt;" Guid="8752def6-b1be-4588-8529-7a414f078ade" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Axxess Identity' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="1e8a531f8bd8447ed095e40c5ceb1b5e.png" xmlns="">0ga9tuTtzdEaIIk1ZVqUbAQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

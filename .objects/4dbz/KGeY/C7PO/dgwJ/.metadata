@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Text - Task Type  (Task Tab)",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "dgwJH2MAXkaF4HZRVTBTvw",
+  "Reference": "rYh6cYecTEitmrbdMA9QUg/dgwJH2MAXkaF4HZRVTBTvw",
+  "ParentRef": "rYh6cYecTEitmrbdMA9QUg/C7POD5CzZ0mkfEvaahGDKA",
+  "Created": "2025-12-16T03:53:14.3052508Z",
+  "Updated": "2025-12-16T03:56:44.6780104Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

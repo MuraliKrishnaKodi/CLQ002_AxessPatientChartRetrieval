@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Text - File Name",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "7HBYikse00OrRY92oWqQ1Q",
+  "Reference": "rYh6cYecTEitmrbdMA9QUg/7HBYikse00OrRY92oWqQ1Q",
+  "ParentRef": "rYh6cYecTEitmrbdMA9QUg/7gzsxf-_00S9U8O3r5Cdbg",
+  "Created": "2025-12-11T00:50:04.7692569Z",
+  "Updated": "2025-12-11T00:51:07.9083105Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

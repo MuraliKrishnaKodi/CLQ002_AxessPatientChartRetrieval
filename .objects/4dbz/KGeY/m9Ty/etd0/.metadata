@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Button - Ok to continue",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "etd0X1-f3k6ihjpBCoIKyg",
+  "Reference": "rYh6cYecTEitmrbdMA9QUg/etd0X1-f3k6ihjpBCoIKyg",
+  "ParentRef": "rYh6cYecTEitmrbdMA9QUg/m9TyPmXm8kyjVFD1blU2Ig",
+  "Created": "2025-12-07T19:38:34.931911Z",
+  "Updated": "2025-12-07T19:40:10.5555533Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

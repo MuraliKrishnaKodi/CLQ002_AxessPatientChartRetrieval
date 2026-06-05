@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Chrome - Axxess Login",
+  "Description": "Axxess Login Page",
+  "Type": "Screen",
+  "Id": "m9TyPmXm8kyjVFD1blU2Ig",
+  "Reference": "rYh6cYecTEitmrbdMA9QUg/m9TyPmXm8kyjVFD1blU2Ig",
+  "ParentRef": "rYh6cYecTEitmrbdMA9QUg/KGeYZjAsVkyBvUNHnp_mJA",
+  "Created": "2025-12-04T23:34:04.099591Z",
+  "Updated": "2025-12-05T01:25:52.3610697Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="2U4FgvYr5kam0lBzOh1xxw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="agencycore10.axxessweb.com" CVScreenId="6a5462ad-ba0f-4ced-bcd3-50821847f04d" CvTextArea="906, 621, 123, 12" CvTextArgument="L O A D I N G" CvType="Text" DesignTimeRectangle="849, 619, 249, 18" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='LOADING' parentid='qac_list' tag='DIV' /&gt;" Guid="ffd2a7ad-bc6e-4210-bb58-073166b5c3a6" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Axxess™ Technology Solutions - Agency Management Desktop' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="f2bc17e21f73336c145fc75db471e92a.png" xmlns="">0I4LOCWQTukGq46buFKExow</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

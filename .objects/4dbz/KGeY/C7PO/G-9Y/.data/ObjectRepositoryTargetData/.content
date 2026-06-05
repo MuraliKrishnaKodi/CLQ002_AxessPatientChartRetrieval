@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="Kk6vq4AOmk-ucQYamD5bBw" Reference="rYh6cYecTEitmrbdMA9QUg/G-9YnL366EOeQ0HJc0DF1w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="agencycore9.axxessweb.com" DesignTimeRectangle="401, 318, 100, 29" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='SELECT' name='qac_patient_status' /&gt;" Guid="34c1e602-26e2-4ec4-89c4-71f0002eb133" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Axxess™ Technology Solutions - Agency Management Desktop' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="0fd267393c43c64f950f914a93663893.png" xmlns="">0Raj8EdmY0kaxiGJo1gMPxg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

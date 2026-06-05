@@ -1,0 +1,18 @@
+﻿{
+  "Name": "SubPage - Stick Note",
+  "Description": "The page that opens up when we click on the red stick note",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "I5zZSt9IF0O5OCTQeqTlIQ",
+  "Reference": "rYh6cYecTEitmrbdMA9QUg/I5zZSt9IF0O5OCTQeqTlIQ",
+  "ParentRef": "rYh6cYecTEitmrbdMA9QUg/C7POD5CzZ0mkfEvaahGDKA",
+  "Created": "2025-12-16T02:58:24.8207442Z",
+  "Updated": "2025-12-16T02:59:54.0118261Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.21.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

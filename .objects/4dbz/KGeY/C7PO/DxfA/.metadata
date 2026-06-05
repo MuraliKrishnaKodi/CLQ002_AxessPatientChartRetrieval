@@ -1,0 +1,18 @@
+﻿{
+  "Name": "Dropdown - Selecting Branch Name",
+  "Description": "Dropdown for Selecting Branch Name in special cases like Elmwood MA Branch Office that we saw",
+  "Type": "Element",
+  "TaxonomyType": "Dropdown",
+  "Id": "DxfAdiWljUKurhyp2Izy_w",
+  "Reference": "rYh6cYecTEitmrbdMA9QUg/DxfAdiWljUKurhyp2Izy_w",
+  "ParentRef": "rYh6cYecTEitmrbdMA9QUg/C7POD5CzZ0mkfEvaahGDKA",
+  "Created": "2026-03-18T10:06:22.6010914Z",
+  "Updated": "2026-03-18T10:08:13.8750166Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.21.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

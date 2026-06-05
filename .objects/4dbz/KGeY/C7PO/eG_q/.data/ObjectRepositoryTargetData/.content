@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="SKFNLyVgpE-JJwswx2oZDA" Reference="rYh6cYecTEitmrbdMA9QUg/eG_qKhRCW0e5ZTjXUkvkQQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="agencycore10.axxessweb.com" CVScreenId="71dbff02-5654-4eb5-a1b3-1e198ae182f9" CvElementArea="1785, 340, 130, 32" CvTextArea="1814, 349, 47, 16" CvTextArgument="Logout" CvType="Button" DesignTimeRectangle="1786, 342, 128, 28" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='*Logout*' parentid='app-header-top' tag='DIV' /&gt;" Guid="563d6de5-a920-4c20-914e-ad25af541499" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Axxess™ Technology Solutions - Agency Management Desktop' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="aebc2d1070964106b3fe418d7d5d0fe2.png" xmlns="">0KHNGQ6xmpUe__NI-JI3WCg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

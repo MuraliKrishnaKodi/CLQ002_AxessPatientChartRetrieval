@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Dropdown - Tasks",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "u2Vbb868gkiqkt8VhvlaFw",
+  "Reference": "rYh6cYecTEitmrbdMA9QUg/u2Vbb868gkiqkt8VhvlaFw",
+  "ParentRef": "rYh6cYecTEitmrbdMA9QUg/C7POD5CzZ0mkfEvaahGDKA",
+  "Created": "2025-12-16T03:21:31.1974075Z",
+  "Updated": "2025-12-16T03:23:17.3010847Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

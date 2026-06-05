@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="b-24xCvtoEqd9z-X8aTcpQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="agencycore9.axxessweb.com" CVScreenId="887664f5-8680-4b06-9ce8-5087ef9e80ce" CvElementArea="1015, 173, 84, 49" CvTextArea="1046, 192, 21, 12" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="1022, 179, 71, 38" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl name='OK' role='push button' /&gt;" Guid="1bb8afaa-4d90-4daa-9d66-abc3f0475656" ScopeSelectorArgument="&lt;wnd app='chrome.exe' title='Axxess™ Technology Solutions*' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="29d43c378fe82bc2a760bb59f7a473a0.png" xmlns="">0wIUN6fNL3EOAgJOcDi1Orw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

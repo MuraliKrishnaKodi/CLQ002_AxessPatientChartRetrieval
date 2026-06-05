@@ -1,0 +1,15 @@
+﻿{
+  "Name": "Chrome - Axxess Homepage",
+  "Type": "Screen",
+  "Id": "rygqbxsSd0iu2F6vhsgpqQ",
+  "Reference": "rYh6cYecTEitmrbdMA9QUg/rygqbxsSd0iu2F6vhsgpqQ",
+  "ParentRef": "rYh6cYecTEitmrbdMA9QUg/KGeYZjAsVkyBvUNHnp_mJA",
+  "Created": "2025-12-08T17:42:03.8809735Z",
+  "Updated": "2025-12-08T17:43:48.0523772Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

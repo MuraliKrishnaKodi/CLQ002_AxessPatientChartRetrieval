@@ -1,0 +1,6 @@
+{
+  "Name": "CLQ002_AxessPatientChartRetrieval",
+  "ProjectType": "Process",
+  "Description": "The process involves accessing the Axxess portal to retrieve and prepare task allocation reports. A final chart report is prepared by retaining only the OASIS-related records and removing all other task types. It then references the notes section to identify records marked as OASIS completed and removes their corresponding chart data , a summary chart report is generated to facilitate task allocation.",
+  "MainFile": "Workflows\\Main.xaml"
+}

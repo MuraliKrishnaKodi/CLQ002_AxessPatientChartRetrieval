@@ -1,0 +1,17 @@
+﻿{
+  "Name": "Button - Logout Hover",
+  "Description": "For logout button, hovering over the My Account icon",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "eG_qKhRCW0e5ZTjXUkvkQQ",
+  "Reference": "rYh6cYecTEitmrbdMA9QUg/eG_qKhRCW0e5ZTjXUkvkQQ",
+  "ParentRef": "rYh6cYecTEitmrbdMA9QUg/C7POD5CzZ0mkfEvaahGDKA",
+  "Created": "2025-12-08T19:50:29.9384666Z",
+  "Updated": "2025-12-09T15:15:46.9308122Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

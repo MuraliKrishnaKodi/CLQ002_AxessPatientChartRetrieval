@@ -1,0 +1,18 @@
+﻿{
+  "Name": "Button - Red Sticky Note",
+  "Description": "For clicking on the red stick note",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "vd-b6NPwu0WnQFtFegR7XA",
+  "Reference": "rYh6cYecTEitmrbdMA9QUg/vd-b6NPwu0WnQFtFegR7XA",
+  "ParentRef": "rYh6cYecTEitmrbdMA9QUg/C7POD5CzZ0mkfEvaahGDKA",
+  "Created": "2025-12-16T02:56:45.944162Z",
+  "Updated": "2025-12-16T03:01:10.1005546Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.21.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

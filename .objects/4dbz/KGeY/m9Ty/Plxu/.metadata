@@ -1,0 +1,17 @@
+﻿{
+  "Name": "Button - Close Popup",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "Plxu-o31rkOGMKCg4X8LNg",
+  "Reference": "rYh6cYecTEitmrbdMA9QUg/Plxu-o31rkOGMKCg4X8LNg",
+  "ParentRef": "rYh6cYecTEitmrbdMA9QUg/m9TyPmXm8kyjVFD1blU2Ig",
+  "Created": "2026-03-07T16:37:58.039219Z",
+  "Updated": "2026-03-09T14:39:41.8086497Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.21.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="NPOhuEapCECtfkFcRh4VNQ" Reference="rYh6cYecTEitmrbdMA9QUg/vd-b6NPwu0WnQFtFegR7XA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="agencycore10.axxessweb.com" CVScreenId="152762c1-ac5e-4761-b892-099958c6cf6e" DesignTimeRectangle="1356, 533, 20, 18" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='qac_table' tag='TABLE' /&gt;&lt;webctrl tableCol='9' tableRow='3' tag='I' parentclass='notes' class='fa fa-file qac-red-note' /&gt;" Guid="9608bf2a-4a63-4432-a4ad-3be9c78f53df" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Axxess™ Technology Solutions*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="947fa3f13b31e5c90508fb5fee893e87.png" xmlns="">0mB1byGMkVECxE07nGEFWCg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

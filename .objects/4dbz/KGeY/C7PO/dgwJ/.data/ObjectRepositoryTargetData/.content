@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="CApApKXwa0yULlgCDmvlBg" Reference="rYh6cYecTEitmrbdMA9QUg/dgwJH2MAXkaF4HZRVTBTvw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="agencycore9.axxessweb.com" DesignTimeRectangle="64, 503, 46, 14" ElementVisibilityArgument="Interactive" FullSelectorArgument="[string.Format(&quot;&lt;webctrl parentid='qac_table' tag='TABLE' /&gt;&lt;webctrl tag='B' aaname='{0}' /&gt;&quot;, StrTaskType)]" Guid="3e2113c6-e636-4b5f-aee6-c57d7f07dd9d" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Axxess™ Technology Solutions*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="854924e49cfe4c61fea7cfbcc780ceab.png" xmlns="">0u-yPnKLTv065c7aSV4sSmA</imageRef>
+    </TargetAnchorable>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData DefaultValue="OT Visit" Name="StrTaskType" />
+    </scg:List>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

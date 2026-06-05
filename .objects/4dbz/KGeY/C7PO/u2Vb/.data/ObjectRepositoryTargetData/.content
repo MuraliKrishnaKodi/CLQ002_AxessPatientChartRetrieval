@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="-Q2sT3znvkqHJymsLek95A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="agencycore9.axxessweb.com" DesignTimeRectangle="525, 281, 150, 29" ElementType="DropDown" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='SELECT' name='qac_tasks' /&gt;" Guid="51a2753d-8c0c-401f-99e5-665e9c3497b1" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Axxess™ Technology Solutions*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="3b6bb7bf79f2bddb6b2bc1e42b380e47.png" xmlns="">0KZdewJ_i9U6Skomu-nachg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="bBYUkj3gH0Gf3JDRxewFzA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="agencycore8.axxessweb.com" CVScreenId="516f679e-64b6-41f3-94fa-ddb338610b54" DesignTimeRectangle="50, 339, 150, 29" ElementType="DropDown" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='qac_branchid' tag='SELECT' /&gt;" Guid="c304c396-52f8-4295-b7a2-a21f2f4b7a48" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*xxess*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="0dd2fec99ac566540da509b3a4ccf642.png" xmlns="">0ejL4PTW9zUew-z1CFaDZrw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,15 @@
+﻿{
+  "Name": "Chrome - Axxess",
+  "Description": "The following are the credentials for Axxess portal",
+  "Type": "App",
+  "Id": "4dbzYciJ1Ua2A7U3wQBLPQ",
+  "Reference": "rYh6cYecTEitmrbdMA9QUg/4dbzYciJ1Ua2A7U3wQBLPQ",
+  "Created": "2025-12-04T23:33:06.4540352Z",
+  "Updated": "2025-12-05T01:25:59.6409493Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

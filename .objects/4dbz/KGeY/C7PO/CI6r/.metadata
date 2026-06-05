@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Button - Home Dropdown Button",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "CI6rgoXIb0asJ7rRW1_IOg",
+  "Reference": "rYh6cYecTEitmrbdMA9QUg/CI6rgoXIb0asJ7rRW1_IOg",
+  "ParentRef": "rYh6cYecTEitmrbdMA9QUg/C7POD5CzZ0mkfEvaahGDKA",
+  "Created": "2025-12-08T18:37:54.6408812Z",
+  "Updated": "2025-12-08T18:42:32.6050802Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

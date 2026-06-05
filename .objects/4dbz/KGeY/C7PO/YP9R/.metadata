@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Button - QA (Quality Assurance) Hover",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "YP9RveSWBEOMeQAZTZoFhA",
+  "Reference": "rYh6cYecTEitmrbdMA9QUg/YP9RveSWBEOMeQAZTZoFhA",
+  "ParentRef": "rYh6cYecTEitmrbdMA9QUg/C7POD5CzZ0mkfEvaahGDKA",
+  "Created": "2025-12-08T19:28:51.9087207Z",
+  "Updated": "2025-12-08T19:32:40.9175619Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

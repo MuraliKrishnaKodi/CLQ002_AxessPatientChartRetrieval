@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Text Box - Patient ID",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "xz9zZ2L_k0GaYQ6MbdcFIQ",
+  "Reference": "rYh6cYecTEitmrbdMA9QUg/xz9zZ2L_k0GaYQ6MbdcFIQ",
+  "ParentRef": "rYh6cYecTEitmrbdMA9QUg/C7POD5CzZ0mkfEvaahGDKA",
+  "Created": "2025-12-16T03:23:28.6201933Z",
+  "Updated": "2025-12-16T03:27:51.7046348Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

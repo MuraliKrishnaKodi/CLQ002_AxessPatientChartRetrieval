@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Text - Password",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "ZaKurpghr0ah093_HZzhGA",
+  "Reference": "rYh6cYecTEitmrbdMA9QUg/ZaKurpghr0ah093_HZzhGA",
+  "ParentRef": "rYh6cYecTEitmrbdMA9QUg/m9TyPmXm8kyjVFD1blU2Ig",
+  "Created": "2025-12-07T18:30:32.7136594Z",
+  "Updated": "2025-12-07T18:36:39.6021935Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

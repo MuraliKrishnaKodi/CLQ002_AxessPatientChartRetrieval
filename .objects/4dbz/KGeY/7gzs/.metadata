@@ -1,0 +1,15 @@
+﻿{
+  "Name": "File Explorer",
+  "Type": "Screen",
+  "Id": "7gzsxf-_00S9U8O3r5Cdbg",
+  "Reference": "rYh6cYecTEitmrbdMA9QUg/7gzsxf-_00S9U8O3r5Cdbg",
+  "ParentRef": "rYh6cYecTEitmrbdMA9QUg/KGeYZjAsVkyBvUNHnp_mJA",
+  "Created": "2025-12-10T11:40:40.1290378Z",
+  "Updated": "2025-12-10T11:41:07.1805097Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

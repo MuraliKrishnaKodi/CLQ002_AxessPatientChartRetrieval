@@ -1,0 +1,15 @@
+﻿{
+  "Name": "Chrome - Axxess Agency Management",
+  "Type": "Screen",
+  "Id": "C7POD5CzZ0mkfEvaahGDKA",
+  "Reference": "rYh6cYecTEitmrbdMA9QUg/C7POD5CzZ0mkfEvaahGDKA",
+  "ParentRef": "rYh6cYecTEitmrbdMA9QUg/KGeYZjAsVkyBvUNHnp_mJA",
+  "Created": "2025-12-08T18:03:10.7074251Z",
+  "Updated": "2025-12-08T18:04:24.9325668Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

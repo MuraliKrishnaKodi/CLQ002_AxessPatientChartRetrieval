@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="IbiO6ZHPZUaqFUgiEvQMTw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="identity.axxessweb.com/login" CVScreenId="1c2aa369-2453-46b2-b8dc-ab1c80c2cb15" CvElementArea="1067, 399, 422, 53" CvTextArea="1109, 418, 337, 19" CvTextArgument="Some of your info isn't correct. Please try again." CvType="Button" DesignTimeRectangle="1068, 401, 420, 50" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='DIV' aaname=' *Please try again*' /&gt;" Guid="454e3459-0fae-4349-81f6-d21dd6db227c" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Axxess Identity' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="ef03dc112c8cfca0fb473c3100ada939.png" xmlns="">0VewlJDm2bkuX9fRjuNHg0Q</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

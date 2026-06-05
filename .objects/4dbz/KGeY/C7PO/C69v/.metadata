@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Button - Start Date",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "C69vb5_fXUuq88aaJOLl6g",
+  "Reference": "rYh6cYecTEitmrbdMA9QUg/C69vb5_fXUuq88aaJOLl6g",
+  "ParentRef": "rYh6cYecTEitmrbdMA9QUg/C7POD5CzZ0mkfEvaahGDKA",
+  "Created": "2025-12-09T16:18:27.2071778Z",
+  "Updated": "2025-12-09T16:19:47.0385192Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

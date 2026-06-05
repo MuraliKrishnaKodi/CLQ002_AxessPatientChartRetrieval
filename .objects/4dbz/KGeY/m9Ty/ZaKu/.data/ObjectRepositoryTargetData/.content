@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="3BLUaYkYxE2Wt4JnDQP9og" Reference="rYh6cYecTEitmrbdMA9QUg/ZaKurpghr0ah093_HZzhGA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="identity.axxessweb.com/login" CVScreenId="26aa96a2-c996-4760-9271-b915f00be631" DesignTimeRectangle="1068, 512, 420, 43" ElementType="InputBoxPassword" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='INPUT' class='form-control au-target' /&gt;" Guid="f530bb24-7eb1-44de-927c-70e7856f9691" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Axxess Identity' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
