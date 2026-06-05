@@ -142,7 +142,7 @@
       <AssemblyReference>Studio.Generated.TypedDataTable1</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Dispatcher" sap:VirtualizedContainerService.HintSize="747,3941" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Dispatcher" sap:VirtualizedContainerService.HintSize="1038,3885" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Default="[1]" Name="intRowIndex" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtEMRData" />
@@ -157,14 +157,14 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="Arguments::&#xA;&#xA;io_boolFirstRun: A flag used to differentiate the first run from subsequent runs, preventing items from being loaded repeatedly&#xA;&#xA;in_strRunDate: The run date for which bot should run&#xA;&#xA;in_strOrchestratorName: The name of the Orchestrator where the items need to be loaded&#xA;&#xA;in_strEMRFileWorkbookURL: The SharePoint URL of the EMR File&#xA;&#xA;in_strEMRFileSteetName: The sheet name which need to be read from EMR file&#xA;&#xA;in_strPasswordColumnName: The column name where the passwords are stored in EMR file. This argument's value should be sourced from the Config file. It specifies the column in which the Password field is located (e.g., D, I, J).&#xA;&#xA;in_strPasswordInvalidColumnName: The column name where the Password validation remarks are present in EMR file. This argument's value should be sourced from the Config file. It specifies the column in which the 'Password Invalid?' field is located (e.g., D, I, J).&#xA;&#xA;in_datatimeStart: The starting time from which queue data should be fetched.&#xA;&#xA;in_datetimeEnd: The ending time to which queue data should be fetched.&#xA;&#xA;&#xA;&#xA;Description:&#xA;&#xA;This workflow adds items to the queue from the EMR file during the first execution. From the second execution onward, it checks whether any items exist in the New state within the specified start and end timestamps. If none are found, it re-adds the failed items to the queue - provided the failure reason is an incorrect username or password." DisplayName="Dispatcher" sap:VirtualizedContainerService.HintSize="558,3918" sap2010:WorkflowViewState.IdRef="Sequence_16">
+    <Sequence sap2010:Annotation.AnnotationText="Arguments::&#xA;&#xA;io_boolFirstRun: A flag used to differentiate the first run from subsequent runs, preventing items from being loaded repeatedly&#xA;&#xA;in_strRunDate: The run date for which bot should run&#xA;&#xA;in_strOrchestratorName: The name of the Orchestrator where the items need to be loaded&#xA;&#xA;in_strEMRFileWorkbookURL: The SharePoint URL of the EMR File&#xA;&#xA;in_strEMRFileSteetName: The sheet name which need to be read from EMR file&#xA;&#xA;in_strPasswordColumnName: The column name where the passwords are stored in EMR file. This argument's value should be sourced from the Config file. It specifies the column in which the Password field is located (e.g., D, I, J).&#xA;&#xA;in_strPasswordInvalidColumnName: The column name where the Password validation remarks are present in EMR file. This argument's value should be sourced from the Config file. It specifies the column in which the 'Password Invalid?' field is located (e.g., D, I, J).&#xA;&#xA;in_datatimeStart: The starting time from which queue data should be fetched.&#xA;&#xA;in_datetimeEnd: The ending time to which queue data should be fetched.&#xA;&#xA;&#xA;&#xA;Description:&#xA;&#xA;This workflow adds items to the queue from the EMR file during the first execution. From the second execution onward, it checks whether any items exist in the New state within the specified start and end timestamps. If none are found, it re-adds the failed items to the queue - provided the failure reason is an incorrect username or password." DisplayName="Dispatcher" sap:VirtualizedContainerService.HintSize="558,3862" sap2010:WorkflowViewState.IdRef="Sequence_16">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <If sap2010:Annotation.AnnotationText="At the first run, the value of the argument - io_boolFirstRun should be True, and from the second run onward, it should be False. This logic should be handled by the parent workflow." Condition="[io_boolFirstRun AndAlso in_boolLoadFreshItems]" DisplayName="If- First Run" sap:VirtualizedContainerService.HintSize="524,3236" sap2010:WorkflowViewState.IdRef="If_3">
+      <If sap2010:Annotation.AnnotationText="At the first run, the value of the argument - io_boolFirstRun should be True, and from the second run onward, it should be False. This logic should be handled by the parent workflow." Condition="[io_boolFirstRun AndAlso in_boolLoadFreshItems]" DisplayName="If- First Run" sap:VirtualizedContainerService.HintSize="524,3180" sap2010:WorkflowViewState.IdRef="If_3">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -173,13 +173,13 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <If.Then>
-          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="522,2942" sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="522,2886" sap2010:WorkflowViewState.IdRef="Sequence_7">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <umae:ReadRangeConnections x:TypeArguments="sd:DataTable" BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentItemId="{x:Null}" BrowserSiteUrl="{x:Null}" ColumnNames="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ItemIdBackup="{x:Reference __ReferenceID0}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntrySiteUrl="{x:Null}" RangeInformation="{x:Null}" RangeMetadata="{x:Null}" TemplateBrowserDriveName="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" TemplateBrowserSiteUrl="{x:Null}" WorkbookSample="{x:Null}" AuthScopesInvalid="False" ConnectionId="7a2f8954-fd48-42d7-b3f8-ab81ed3e740a" DisplayName="Read Range - EMR Sheet" HasHeaders="True" sap:VirtualizedContainerService.HintSize="488,294" sap2010:WorkflowViewState.IdRef="ReadRangeConnections`1_1" ItemSelectionMode="ItemUrl" ManualEntryItemUrl="[in_strEMRFileWorkbookURL]" Range="[in_strEMRFileSteetName]" RangeMode="Default" ReadAs="Values" Result="[dtEMRData]" UseConnectionService="True" WorkingWithTemplateWorkbook="False">
+            <umae:ReadRangeConnections x:TypeArguments="sd:DataTable" BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentItemId="{x:Null}" BrowserSiteUrl="{x:Null}" ColumnNames="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ItemIdBackup="{x:Reference __ReferenceID0}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntrySiteUrl="{x:Null}" RangeInformation="{x:Null}" RangeMetadata="{x:Null}" TemplateBrowserDriveName="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" TemplateBrowserSiteUrl="{x:Null}" WorkbookSample="{x:Null}" AuthScopesInvalid="False" ConnectionId="b0fe217d-e89d-4be1-8ceb-33db9e950228" DisplayName="Read Range - EMR Sheet" HasHeaders="True" sap:VirtualizedContainerService.HintSize="488,290" sap2010:WorkflowViewState.IdRef="ReadRangeConnections`1_1" ItemSelectionMode="ItemUrl" ManualEntryItemUrl="[in_strEMRFileWorkbookURL]" Range="[in_strEMRFileSteetName]" RangeMode="Default" ReadAs="Values" Result="[dtEMRData]" UseConnectionService="True" WorkingWithTemplateWorkbook="False">
               <umae:ReadRangeConnections.DriveItemArgument>
                 <umafm:DriveItemArgument BrowserDriveId="{x:Null}" BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentDriveId="{x:Null}" BrowserParentDriveName="{x:Null}" BrowserParentItemFriendlyName="{x:Null}" BrowserParentItemId="{x:Null}" BrowserParentPath="{x:Null}" BrowserSiteUrl="{x:Null}" BrowserSpecificUrl="{x:Null}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Item="{x:Null}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntrySiteUrl="{x:Null}" ReferenceId="{x:Null}" FullPathHint="" ItemSelectionMode="ItemUrl" ManualEntryItemUrl="[in_strEMRFileWorkbookURL]" ParentFullPathHint="">
                   <umafm:DriveItemArgument.ItemIdBackup>
@@ -217,27 +217,27 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </umae:ReadRangeConnections>
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtEMRData]" DisplayName="For Each Row in EMR Data" sap:VirtualizedContainerService.HintSize="488,2353" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtEMRData]" DisplayName="For Each Row in EMR Data" sap:VirtualizedContainerService.HintSize="488,2309" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="486,2167" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="486,2127" sap2010:WorkflowViewState.IdRef="Sequence_2">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <If Condition="[CurrentRow(&quot;Password Invalid?&quot;).ToString.ToLower.Trim.Equals(&quot;yes&quot;)]" DisplayName="If - Invalid Password" sap:VirtualizedContainerService.HintSize="452,609" sap2010:WorkflowViewState.IdRef="If_2">
+                    <If Condition="[CurrentRow(&quot;Password Invalid?&quot;).ToString.ToLower.Trim.Equals(&quot;yes&quot;)]" DisplayName="If - Invalid Password" sap:VirtualizedContainerService.HintSize="452,589" sap2010:WorkflowViewState.IdRef="If_2">
                       <If.Then>
-                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,372" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,360" sap2010:WorkflowViewState.IdRef="Sequence_5">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Assign sap2010:Annotation.AnnotationText="This Row Index represents the row number in the Excel sheet. It is used to retrieve a specific password or to directly update the ‘Invalid Password?’ cell for a particular agency" DisplayName="Assign - Row Index" sap:VirtualizedContainerService.HintSize="416,256" sap2010:WorkflowViewState.IdRef="Assign_5">
+                          <Assign sap2010:Annotation.AnnotationText="This Row Index represents the row number in the Excel sheet. It is used to retrieve a specific password or to directly update the ‘Invalid Password?’ cell for a particular agency" DisplayName="Assign - Row Index" sap:VirtualizedContainerService.HintSize="416,252" sap2010:WorkflowViewState.IdRef="Assign_5">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:Int32">[intRowIndex]</OutArgument>
                             </Assign.To>
@@ -250,11 +250,11 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </Assign>
-                          <ui:Continue sap:VirtualizedContainerService.HintSize="416,52" sap2010:WorkflowViewState.IdRef="Continue_1" />
+                          <ui:Continue sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="Continue_1" />
                         </Sequence>
                       </If.Then>
                       <If.Else>
-                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,94" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_6">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -263,7 +263,7 @@
                         </Sequence>
                       </If.Else>
                     </If>
-                    <Assign DisplayName="Assign - Reference" sap:VirtualizedContainerService.HintSize="452,179" sap2010:WorkflowViewState.IdRef="Assign_2">
+                    <Assign DisplayName="Assign - Reference" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="Assign_2">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[Reference]</OutArgument>
                       </Assign.To>
@@ -271,7 +271,7 @@
                         <InArgument x:TypeArguments="x:String">[CDate(in_strRunDate).ToString("MMddyyyy")+"_Allocation"+in_intAllocationNumber.ToString+"_"+CurrentRow("Agency Name").ToString+"_"+CurrentRow("Sl#").ToString]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <Assign sap2010:Annotation.AnnotationText="This Row Index represents the row number in the Excel sheet. It is used to retrieve a specific password or to directly update the ‘Invalid Password?’ cell for a particular agency" DisplayName="Assign - Row Index" sap:VirtualizedContainerService.HintSize="452,256" sap2010:WorkflowViewState.IdRef="Assign_4">
+                    <Assign sap2010:Annotation.AnnotationText="This Row Index represents the row number in the Excel sheet. It is used to retrieve a specific password or to directly update the ‘Invalid Password?’ cell for a particular agency" DisplayName="Assign - Row Index" sap:VirtualizedContainerService.HintSize="452,252" sap2010:WorkflowViewState.IdRef="Assign_4">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:Int32">[intRowIndex]</OutArgument>
                       </Assign.To>
@@ -284,8 +284,8 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </Assign>
-                    <ui:GetQueueItems Duration="{x:Null}" From="{x:Null}" Priority="{x:Null}" Skip="{x:Null}" TimeoutMS="{x:Null}" To="{x:Null}" Top="{x:Null}" DisplayName="Get Queue Items" FilterStrategy="Equals" sap:VirtualizedContainerService.HintSize="452,180" sap2010:WorkflowViewState.IdRef="GetQueueItems_1" QueueItemStates="New, Failed, Successful" QueueName="[in_strOrchestratorName]" Reference="[Reference]" Result="[qItems]" />
-                    <If Condition="[qItems.Count=0]" DisplayName="If Transaction Item Doesn't Exist" sap:VirtualizedContainerService.HintSize="452,879" sap2010:WorkflowViewState.IdRef="If_1">
+                    <ui:GetQueueItems Duration="{x:Null}" From="{x:Null}" Priority="{x:Null}" Skip="{x:Null}" TimeoutMS="{x:Null}" To="{x:Null}" Top="{x:Null}" DisplayName="Get Queue Items" FilterStrategy="Equals" sap:VirtualizedContainerService.HintSize="452,176" sap2010:WorkflowViewState.IdRef="GetQueueItems_1" QueueItemStates="New, Failed, Successful" QueueName="[in_strOrchestratorName]" Reference="[Reference]" Result="[qItems]" />
+                    <If Condition="[qItems.Count=0]" DisplayName="If Transaction Item Doesn't Exist" sap:VirtualizedContainerService.HintSize="452,875" sap2010:WorkflowViewState.IdRef="If_1">
                       <If.Then>
                         <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,511" sap2010:WorkflowViewState.IdRef="Sequence_3">
                           <sap:WorkflowViewStateService.ViewState>
@@ -347,7 +347,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:ForEachRow>
-            <ui:LogMessage DisplayName="Log Message (Queue items added)" sap:VirtualizedContainerService.HintSize="488,179" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[CountItems.ToString+&quot; items added to the queue&quot;]">
+            <ui:LogMessage DisplayName="Log Message (Queue items added)" sap:VirtualizedContainerService.HintSize="488,175" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[CountItems.ToString+&quot; items added to the queue&quot;]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>

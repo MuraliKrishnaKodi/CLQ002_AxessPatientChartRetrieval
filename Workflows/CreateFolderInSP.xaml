@@ -121,25 +121,25 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CreateFolderInSP" sap:VirtualizedContainerService.HintSize="1234,1726" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CreateFolderInSP" sap:VirtualizedContainerService.HintSize="1038,1707" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap:VirtualizedContainerService.HintSize="522,1703" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence sap:VirtualizedContainerService.HintSize="522,1684" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each Sub Folders" sap:VirtualizedContainerService.HintSize="488,1279" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[in_strFolderHierarchyToCreate.Split(&quot;/&quot;)]">
+      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each Sub Folders" sap:VirtualizedContainerService.HintSize="488,1260" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[in_strFolderHierarchyToCreate.Split(&quot;/&quot;)]">
         <ui:ForEach.Body>
           <ActivityAction x:TypeArguments="x:String">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:String" Name="currentText" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="486,1148" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="486,1129" sap2010:WorkflowViewState.IdRef="Sequence_5">
               <Sequence.Variables>
                 <Variable x:TypeArguments="umfm:O365DriveRemoteItem[]" Name="folderList" />
               </Sequence.Variables>
@@ -148,7 +148,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <umaf:GetFileListConnections AllColumns="{x:Array Type=umsm:Office365SharepointListColumnSlim}" BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentItemId="{x:Null}" BrowserSiteUrl="{x:Null}" BrowserSpecificUrl="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" DynamicMetadataFilter="{x:Null}" Filter="{x:Null}" FreeTextFilter="{x:Null}" ItemIdBackup="{x:Reference __ReferenceID0}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntrySiteUrl="{x:Null}" MetadataFilter="{x:Null}" QueryFilter="{x:Null}" SharepointLibraryItemFriendlyName="{x:Null}" SharepointListId="{x:Null}" SharepointSiteUrl="{x:Null}" SimpleSearch="{x:Null}" AuthScopesInvalid="False" ConnectionId="7a2f8954-fd48-42d7-b3f8-ab81ed3e740a" DisplayName="Get File or Folder List" sap:VirtualizedContainerService.HintSize="452,189" sap2010:WorkflowViewState.IdRef="GetFileListConnections_1" IncludeSubfolders="False" ItemSelectionMode="ItemUrl" ManualEntryItemUrl="[in_strSPParentFolder]" MaxResults="200" Result="[folderList]" SearchMode="UseSimple" SortOptions="Ascending" TrimDuplicates="False" UseConnectionService="True" WhatToReturn="[UiPath.MicrosoftOffice365.Enums.FindFilesAndFoldersResultType.Folders]" WorkingWithDocumentLibrary="False">
+              <umaf:GetFileListConnections AllColumns="{x:Array Type=umsm:Office365SharepointListColumnSlim}" BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentItemId="{x:Null}" BrowserSiteUrl="{x:Null}" BrowserSpecificUrl="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" DynamicMetadataFilter="{x:Null}" Filter="{x:Null}" FreeTextFilter="{x:Null}" ItemIdBackup="{x:Reference __ReferenceID0}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntrySiteUrl="{x:Null}" MetadataFilter="{x:Null}" QueryFilter="{x:Null}" SharepointLibraryItemFriendlyName="{x:Null}" SharepointListId="{x:Null}" SharepointSiteUrl="{x:Null}" SimpleSearch="{x:Null}" AuthScopesInvalid="False" ConnectionId="b0fe217d-e89d-4be1-8ceb-33db9e950228" DisplayName="Get File or Folder List" sap:VirtualizedContainerService.HintSize="452,185" sap2010:WorkflowViewState.IdRef="GetFileListConnections_1" IncludeSubfolders="False" ItemSelectionMode="ItemUrl" ManualEntryItemUrl="[in_strSPParentFolder]" MaxResults="200" Result="[folderList]" SearchMode="UseSimple" SortOptions="Ascending" TrimDuplicates="False" UseConnectionService="True" WhatToReturn="[UiPath.MicrosoftOffice365.Enums.FindFilesAndFoldersResultType.Folders]" WorkingWithDocumentLibrary="False">
                 <umaf:GetFileListConnections.DriveItemArgument>
                   <umafm:DriveItemArgument BrowserDriveId="{x:Null}" BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentDriveId="{x:Null}" BrowserParentDriveName="{x:Null}" BrowserParentItemFriendlyName="{x:Null}" BrowserParentItemId="{x:Null}" BrowserParentPath="{x:Null}" BrowserSiteUrl="{x:Null}" BrowserSpecificUrl="{x:Null}" ConnectionDescriptor="{x:Null}" FullPathHint="{x:Null}" Item="{x:Null}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntrySiteUrl="{x:Null}" ReferenceId="{x:Null}" ConnectionKey="7a2f8954-fd48-42d7-b3f8-ab81ed3e740a" ItemSelectionMode="ItemUrl" ManualEntryItemUrl="[in_strSPParentFolder]" ParentFullPathHint="">
                     <umafm:DriveItemArgument.ItemIdBackup>
@@ -175,15 +175,15 @@
                   </usau:BackupSlot>
                 </umaf:GetFileListConnections.FilterSelectionBackup>
               </umaf:GetFileListConnections>
-              <If Condition="[folderList.Any(Function(x) x.Name.Equals(currentText, StringComparison.OrdinalIgnoreCase))]" DisplayName="If - Folder Exist" sap:VirtualizedContainerService.HintSize="452,895" sap2010:WorkflowViewState.IdRef="If_1">
+              <If Condition="[folderList.Any(Function(x) x.Name.Equals(currentText, StringComparison.OrdinalIgnoreCase))]" DisplayName="If - Folder Exist" sap:VirtualizedContainerService.HintSize="452,884" sap2010:WorkflowViewState.IdRef="If_1">
                 <If.Then>
-                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,234" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="Sequence_3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Assign DisplayName="Assign - Current Folder URI" sap:VirtualizedContainerService.HintSize="416,170" sap2010:WorkflowViewState.IdRef="Assign_2">
+                    <Assign DisplayName="Assign - Current Folder URI" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="Assign_2">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[in_strSPParentFolder]</OutArgument>
                       </Assign.To>
@@ -194,7 +194,7 @@
                   </Sequence>
                 </If.Then>
                 <If.Else>
-                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,527" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,528" sap2010:WorkflowViewState.IdRef="Sequence_4">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="umfm:O365DriveRemoteItem" Name="folderDetails" />
                     </Sequence.Variables>
@@ -203,7 +203,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <umaf:CreateFolderConnections BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentItemId="{x:Null}" BrowserSiteUrl="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ItemIdBackup="{x:Reference __ReferenceID1}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntrySiteUrl="{x:Null}" AuthScopesInvalid="False" ConflictResolution="Fail" ConnectionId="7a2f8954-fd48-42d7-b3f8-ab81ed3e740a" DisplayName="Create New Folder" sap:VirtualizedContainerService.HintSize="416,293" sap2010:WorkflowViewState.IdRef="CreateFolderConnections_1" ItemSelectionMode="ItemUrl" ManualEntryItemUrl="[in_strSPParentFolder]" NewFolderName="[currentText]" Result="[folderDetails]" UseConnectionService="True">
+                    <umaf:CreateFolderConnections BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentItemId="{x:Null}" BrowserSiteUrl="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ItemIdBackup="{x:Reference __ReferenceID1}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntrySiteUrl="{x:Null}" AuthScopesInvalid="False" ConflictResolution="Fail" ConnectionId="7a2f8954-fd48-42d7-b3f8-ab81ed3e740a" DisplayName="Create New Folder" sap:VirtualizedContainerService.HintSize="416,302" sap2010:WorkflowViewState.IdRef="CreateFolderConnections_1" ItemSelectionMode="ItemUrl" ManualEntryItemUrl="[in_strSPParentFolder]" NewFolderName="[currentText]" Result="[folderDetails]" UseConnectionService="True">
                       <umaf:CreateFolderConnections.DriveItemArgument>
                         <umafm:DriveItemArgument BrowserDriveId="{x:Null}" BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentDriveId="{x:Null}" BrowserParentDriveName="{x:Null}" BrowserParentItemFriendlyName="{x:Null}" BrowserParentItemId="{x:Null}" BrowserParentPath="{x:Null}" BrowserSiteUrl="{x:Null}" BrowserSpecificUrl="{x:Null}" ConnectionDescriptor="{x:Null}" FullPathHint="{x:Null}" Item="{x:Null}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntrySiteUrl="{x:Null}" ReferenceId="{x:Null}" ConnectionKey="7a2f8954-fd48-42d7-b3f8-ab81ed3e740a" ItemSelectionMode="ItemUrl" ManualEntryItemUrl="[in_strSPParentFolder]" ParentFullPathHint="">
                           <umafm:DriveItemArgument.ItemIdBackup>
@@ -223,7 +223,7 @@
                         </umafm:DriveItemArgument>
                       </umaf:CreateFolderConnections.DriveItemArgument>
                     </umaf:CreateFolderConnections>
-                    <Assign DisplayName="Assign - Current Folder URI" sap:VirtualizedContainerService.HintSize="416,170" sap2010:WorkflowViewState.IdRef="Assign_3">
+                    <Assign DisplayName="Assign - Current Folder URI" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="Assign_3">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[in_strSPParentFolder]</OutArgument>
                       </Assign.To>
