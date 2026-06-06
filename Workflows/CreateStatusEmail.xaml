@@ -137,7 +137,7 @@
       <AssemblyReference>UiPath.Platform</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Get all Successful/Failed transactions and generate a status email" DisplayName="CreateStatusEmail" sap:VirtualizedContainerService.HintSize="1281,5099" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Get all Successful/Failed transactions and generate a status email" DisplayName="CreateStatusEmail" sap:VirtualizedContainerService.HintSize="1038,2144" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Default="True" Name="QueueItemExists" />
       <Variable x:TypeArguments="x:Int32" Default="0" Name="SkipItem" />
@@ -153,7 +153,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message (Get process transactions)" sap:VirtualizedContainerService.HintSize="584,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Get processed transactions&quot;]" />
-    <While sap2010:Annotation.AnnotationText="Iterating while the Queue Item Exists flag is True" DisplayName="While Queue Item Exists" sap:VirtualizedContainerService.HintSize="584,1160" sap2010:WorkflowViewState.IdRef="While_1">
+    <While sap2010:Annotation.AnnotationText="Iterating while the Queue Item Exists flag is True" DisplayName="While Queue Item Exists" sap:VirtualizedContainerService.HintSize="584,1116" sap2010:WorkflowViewState.IdRef="While_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
@@ -164,7 +164,7 @@
       <While.Condition>
         <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="QueueItemExists" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_1" />
       </While.Condition>
-      <Sequence sap2010:Annotation.AnnotationText="The sequence responsible for retrieving all of the queue items" DisplayName="Sequence - Get All Queue Items" sap:VirtualizedContainerService.HintSize="538,966" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <Sequence sap2010:Annotation.AnnotationText="The sequence responsible for retrieving all of the queue items" DisplayName="Sequence - Get All Queue Items" sap:VirtualizedContainerService.HintSize="538,954" sap2010:WorkflowViewState.IdRef="Sequence_3">
         <Sequence.Variables>
           <Variable x:TypeArguments="scg:IEnumerable(ui:QueueItem)" Name="CurrentQueueItems" />
         </Sequence.Variables>
@@ -186,7 +186,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </ui:GetQueueItems>
-        <If sap2010:Annotation.AnnotationText="Validating if queue items where retrieved for the current skip count" Condition="[CurrentQueueItems.Count = 0]" DisplayName="If no more queue items" sap:VirtualizedContainerService.HintSize="504,730" sap2010:WorkflowViewState.IdRef="If_1">
+        <If sap2010:Annotation.AnnotationText="Validating if queue items where retrieved for the current skip count" Condition="[CurrentQueueItems.Count = 0]" DisplayName="If no more queue items" sap:VirtualizedContainerService.HintSize="504,718" sap2010:WorkflowViewState.IdRef="If_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
@@ -210,7 +210,7 @@
             </Assign>
           </If.Then>
           <If.Else>
-            <Sequence sap2010:Annotation.AnnotationText="The sequence responisble for concatenating the current queue items collection to final queue items collection and increasing the skip count by 100 for next iteration" DisplayName="Sequence - Concatenate Queue Items &amp; Increment Skip Item Count" sap:VirtualizedContainerService.HintSize="502,435" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence sap2010:Annotation.AnnotationText="The sequence responisble for concatenating the current queue items collection to final queue items collection and increasing the skip count by 100 for next iteration" DisplayName="Sequence - Concatenate Queue Items &amp; Increment Skip Item Count" sap:VirtualizedContainerService.HintSize="502,423" sap2010:WorkflowViewState.IdRef="Sequence_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -218,7 +218,7 @@
                   <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:InvokeCode ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Invoking the code for concatenating the queue items" Code="Dim queueItem As UiPath.Core.QueueItem&#xA;&#xA;For Each queueItem In CurrentQueueItems&#xA;&#x9;&#xA;&#x9;QueueItems.Add(queueItem)&#xA;&#x9;&#xA;Next" DisplayName="Invoke code - Concatenate Queue Items" sap:VirtualizedContainerService.HintSize="450,201" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+              <ui:InvokeCode ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Invoking the code for concatenating the queue items" Code="Dim queueItem As UiPath.Core.QueueItem&#xA;&#xA;For Each queueItem In CurrentQueueItems&#xA;&#x9;&#xA;&#x9;QueueItems.Add(queueItem)&#xA;&#x9;&#xA;Next" DisplayName="Invoke code - Concatenate Queue Items" sap:VirtualizedContainerService.HintSize="468,197" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
                 <ui:InvokeCode.Arguments>
                   <InArgument x:TypeArguments="scg:IEnumerable(ui:QueueItem)" x:Key="CurrentQueueItems">[CurrentQueueItems]</InArgument>
                   <InOutArgument x:TypeArguments="scg:List(ui:QueueItem)" x:Key="QueueItems">[QueueItems]</InOutArgument>
@@ -231,7 +231,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:InvokeCode>
-              <Assign sap2010:Annotation.AnnotationText="Incrementing the skip count value by 100" DisplayName="Assign - Increment Skip Item By 100" sap:VirtualizedContainerService.HintSize="468,170" sap2010:WorkflowViewState.IdRef="Assign_2">
+              <Assign sap2010:Annotation.AnnotationText="Incrementing the skip count value by 100" DisplayName="Assign - Increment Skip Item By 100" sap:VirtualizedContainerService.HintSize="468,166" sap2010:WorkflowViewState.IdRef="Assign_2">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:Int32">[SkipItem]</OutArgument>
                 </Assign.To>
@@ -249,7 +249,7 @@
         </If>
       </Sequence>
     </While>
-    <If Condition="[QueueItems.Count &gt; 0]" DisplayName="If queue items to report" sap:VirtualizedContainerService.HintSize="584,3710" sap2010:WorkflowViewState.IdRef="If_2">
+    <If Condition="[QueueItems.Count &gt; 0]" DisplayName="If queue items to report" sap:VirtualizedContainerService.HintSize="584,767" sap2010:WorkflowViewState.IdRef="If_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -257,7 +257,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence sap2010:Annotation.AnnotationText="Generete status report and send to the business" DisplayName="Sequence - Transactions to report" sap:VirtualizedContainerService.HintSize="581,2983" sap2010:WorkflowViewState.IdRef="Sequence_5">
+        <Sequence sap2010:Annotation.AnnotationText="Generete status report and send to the business" DisplayName="Sequence - Transactions to report" sap:VirtualizedContainerService.HintSize="452,56" sap2010:WorkflowViewState.IdRef="Sequence_5">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Name="StatusRowsValue">
               <Variable.Default>
@@ -267,19 +267,19 @@
           </Sequence.Variables>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage sap2010:Annotation.AnnotationText="Log the message for generating the email body for status email notification to be sent out to the business team" DisplayName="Log Message - Generating Status Email" sap:VirtualizedContainerService.HintSize="547,179" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Generating status email notification body for the current execution run&quot;]">
+          <ui:LogMessage sap2010:Annotation.AnnotationText="Log the message for generating the email body for status email notification to be sent out to the business team" DisplayName="Log Message - Generating Status Email" sap:VirtualizedContainerService.HintSize="547,175" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Generating status email notification body for the current execution run&quot;]">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:LogMessage>
-          <ui:MultipleAssign DisplayName="Multiple Assign - Email Body" sap:VirtualizedContainerService.HintSize="547,215" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+          <ui:MultipleAssign DisplayName="Multiple Assign - Email Body" sap:VirtualizedContainerService.HintSize="547,211" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
             <ui:MultipleAssign.AssignOperations>
               <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -312,20 +312,20 @@
               </scg:List>
             </ui:MultipleAssign.AssignOperations>
           </ui:MultipleAssign>
-          <ui:ForEach x:TypeArguments="ui:QueueItem" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Iterating through each failed case" DisplayName="For Each Failed Queue Item" sap:VirtualizedContainerService.HintSize="547,780" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[QueueItems.Where(Function(x) x.Status = QueueItemStatus.Failed)]">
+          <ui:ForEach x:TypeArguments="ui:QueueItem" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Iterating through each failed case" DisplayName="For Each Failed Queue Item" sap:VirtualizedContainerService.HintSize="547,760" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[QueueItems.Where(Function(x) x.Status = QueueItemStatus.Failed)]">
             <ui:ForEach.Body>
               <ActivityAction x:TypeArguments="ui:QueueItem">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="ui:QueueItem" Name="item" />
                 </ActivityAction.Argument>
-                <If sap2010:Annotation.AnnotationText="Validating if the current queue has the exception  type as Application Exception or Business Exception" Condition="[item.ProcessingException.Type = UiPath.Core.ProcessingExceptionType.ApplicationException]" DisplayName="If System Exception transaction" sap:VirtualizedContainerService.HintSize="521,575" sap2010:WorkflowViewState.IdRef="If_3">
+                <If sap2010:Annotation.AnnotationText="Validating if the current queue has the exception  type as Application Exception or Business Exception" Condition="[item.ProcessingException.Type = UiPath.Core.ProcessingExceptionType.ApplicationException]" DisplayName="If System Exception transaction" sap:VirtualizedContainerService.HintSize="521,559" sap2010:WorkflowViewState.IdRef="If_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <If.Then>
-                    <Sequence sap2010:Annotation.AnnotationText="Generate the status row value for the current failed transaction item having Application exception" DisplayName="Sequence - Generate Current Status Row Value (Application Exception)" sap:VirtualizedContainerService.HintSize="519,234" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                    <Sequence sap2010:Annotation.AnnotationText="Generate the status row value for the current failed transaction item having Application exception" DisplayName="Sequence - Generate Current Status Row Value (Application Exception)" sap:VirtualizedContainerService.HintSize="519,226" sap2010:WorkflowViewState.IdRef="Sequence_7">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -333,7 +333,7 @@
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Assign sap2010:Annotation.AnnotationText="Populating the status row values with failed cases" DisplayName="Assign Populate Status Rows Value With Failed Case" sap:VirtualizedContainerService.HintSize="485,170" sap2010:WorkflowViewState.IdRef="Assign_7">
+                      <Assign sap2010:Annotation.AnnotationText="Populating the status row values with failed cases" DisplayName="Assign Populate Status Rows Value With Failed Case" sap:VirtualizedContainerService.HintSize="485,166" sap2010:WorkflowViewState.IdRef="Assign_7">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:String">[StatusRowsValue]</OutArgument>
                         </Assign.To>
@@ -355,7 +355,7 @@
                     </Sequence>
                   </If.Then>
                   <If.Else>
-                    <Sequence sap2010:Annotation.AnnotationText="Generate the status row value for the current failed transaction item having Business exception" DisplayName="Sequence - Generate Current Status Row Value (Business Exception)" sap:VirtualizedContainerService.HintSize="519,234" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                    <Sequence sap2010:Annotation.AnnotationText="Generate the status row value for the current failed transaction item having Business exception" DisplayName="Sequence - Generate Current Status Row Value (Business Exception)" sap:VirtualizedContainerService.HintSize="519,226" sap2010:WorkflowViewState.IdRef="Sequence_8">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -363,7 +363,7 @@
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Assign sap2010:Annotation.AnnotationText="Populating the status row values with failed cases" DisplayName="Assign - Populate Status Rows Value With Failed Case" sap:VirtualizedContainerService.HintSize="485,170" sap2010:WorkflowViewState.IdRef="Assign_8">
+                      <Assign sap2010:Annotation.AnnotationText="Populating the status row values with failed cases" DisplayName="Assign - Populate Status Rows Value With Failed Case" sap:VirtualizedContainerService.HintSize="485,166" sap2010:WorkflowViewState.IdRef="Assign_8">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:String">[StatusRowsValue]</OutArgument>
                         </Assign.To>
@@ -395,15 +395,15 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:ForEach>
-          <If Condition="[QueueItems.Where(Function(x) x.Status = QueueItemStatus.Failed).Count=0]" DisplayName="If - No Failed Cases" sap:VirtualizedContainerService.HintSize="547,471" sap2010:WorkflowViewState.IdRef="If_7">
+          <If Condition="[QueueItems.Where(Function(x) x.Status = QueueItemStatus.Failed).Count=0]" DisplayName="If - No Failed Cases" sap:VirtualizedContainerService.HintSize="547,455" sap2010:WorkflowViewState.IdRef="If_7">
             <If.Then>
-              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,234" sap2010:WorkflowViewState.IdRef="Sequence_21">
+              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="Sequence_21">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Assign DisplayName="Assign - Remove Table" sap:VirtualizedContainerService.HintSize="416,170" sap2010:WorkflowViewState.IdRef="Assign_12">
+                <Assign DisplayName="Assign - Remove Table" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="Assign_12">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:String">[EmailBody]</OutArgument>
                   </Assign.To>
@@ -417,7 +417,7 @@
               </Sequence>
             </If.Then>
             <If.Else>
-              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,94" sap2010:WorkflowViewState.IdRef="Sequence_22">
+              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_22">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -426,7 +426,7 @@
               </Sequence>
             </If.Else>
           </If>
-          <Assign sap2010:Annotation.AnnotationText="Assign the status row values populated in the prior step to the email body content" DisplayName="Assign - Set Status Row Values" sap:VirtualizedContainerService.HintSize="547,179" sap2010:WorkflowViewState.IdRef="Assign_10">
+          <Assign sap2010:Annotation.AnnotationText="Assign the status row values populated in the prior step to the email body content" DisplayName="Assign - Set Status Row Values" sap:VirtualizedContainerService.HintSize="547,175" sap2010:WorkflowViewState.IdRef="Assign_10">
             <Assign.To>
               <OutArgument x:TypeArguments="x:String">[EmailBody]</OutArgument>
             </Assign.To>
@@ -439,7 +439,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </Assign>
-          <ui:LogMessage sap2010:Annotation.AnnotationText="Log the message for sending out the status email notification to the business team" DisplayName="Log Message (Sending Status Email)" sap:VirtualizedContainerService.HintSize="547,179" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Sending status email&quot;]">
+          <ui:LogMessage sap2010:Annotation.AnnotationText="Log the message for sending out the status email notification to the business team" DisplayName="Log Message (Sending Status Email)" sap:VirtualizedContainerService.HintSize="547,175" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Sending status email&quot;]">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
@@ -448,7 +448,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:LogMessage>
-          <umam:SendMailConnections ArgumentAttachmentPaths="{x:Null}" AttachmentList="{x:Null}" AttachmentPaths="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" Mailbox="{x:Null}" MailboxBackup="{x:Reference __ReferenceID0}" ReplyTo="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="Existing" AuthScopesInvalid="False" Body="[EmailBody]" ConnectionId="441de8ea-bbeb-4b87-83f3-d7f8390a88c9" DisplayName="Send Status Email" sap:VirtualizedContainerService.HintSize="547,544" sap2010:WorkflowViewState.IdRef="SendMailConnections_1" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="[in_DictConfig(&quot;StatusEmailSubject&quot;).ToString]" To="[in_DictConfig(&quot;BusinessEmailRecipients&quot;).ToString.Split(&quot;;&quot;).Select(Function(s) s.Trim).ToArray]" UseConnectionService="True" UseSharedMailbox="False">
+          <umam:SendMailConnections ArgumentAttachmentPaths="{x:Null}" AttachmentList="{x:Null}" AttachmentPaths="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" Mailbox="{x:Null}" MailboxBackup="{x:Reference __ReferenceID0}" ReplyTo="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="Existing" AuthScopesInvalid="False" Body="[EmailBody]" ConnectionId="1a1c0ce5-fcfb-40a2-8a3b-98fbc73918d6" DisplayName="Send Status Email" sap:VirtualizedContainerService.HintSize="547,540" sap2010:WorkflowViewState.IdRef="SendMailConnections_1" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="[in_DictConfig(&quot;StatusEmailSubject&quot;).ToString]" To="[in_DictConfig(&quot;BusinessEmailRecipients&quot;).ToString.Split(&quot;;&quot;).Select(Function(s) s.Trim).ToArray]" UseConnectionService="True" UseSharedMailbox="False">
             <umam:SendMailConnections.AttachmentsBackup>
               <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="Existing">
                 <usau:BackupSlot.BackupValues>
@@ -475,7 +475,7 @@
               </umamm:MailboxArgument>
             </umam:SendMailConnections.MailboxArg>
           </umam:SendMailConnections>
-          <If Condition="[SuccessfulTransactions = 0 and FailedTransactions &gt; 0]" DisplayName="If no successful transactions were processed" sap:VirtualizedContainerService.HintSize="547,341" sap2010:WorkflowViewState.IdRef="If_4">
+          <If Condition="[SuccessfulTransactions = 0 and FailedTransactions &gt; 0]" DisplayName="If no successful transactions were processed" sap:VirtualizedContainerService.HintSize="547,333" sap2010:WorkflowViewState.IdRef="If_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -486,7 +486,7 @@
               <Throw DisplayName="Throw SE - No successful transactions" Exception="[new System.Exception(&quot;No successful transactions were processed&quot;)]" sap:VirtualizedContainerService.HintSize="450,91" sap2010:WorkflowViewState.IdRef="Throw_2" />
             </If.Then>
             <If.Else>
-              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,94" sap2010:WorkflowViewState.IdRef="Sequence_11">
+              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_11">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -498,7 +498,7 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <If sap2010:Annotation.AnnotationText="Check if a Business exception occurred at Init stage or if there are no processed queue items, notify business" Condition="[in_BusinessException is Nothing]" DisplayName="If no Business Exception in Init" sap:VirtualizedContainerService.HintSize="581,575" sap2010:WorkflowViewState.IdRef="If_6">
+        <If sap2010:Annotation.AnnotationText="Check if a Business exception occurred at Init stage or if there are no processed queue items, notify business" Condition="[in_BusinessException is Nothing]" DisplayName="If no Business Exception in Init" sap:VirtualizedContainerService.HintSize="452,559" sap2010:WorkflowViewState.IdRef="If_6">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -507,13 +507,13 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <If.Then>
-            <Sequence DisplayName="Sequence - No cases" sap:VirtualizedContainerService.HintSize="450,234" sap2010:WorkflowViewState.IdRef="Sequence_15">
+            <Sequence DisplayName="Sequence - No cases" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="Sequence_15">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage sap2010:Annotation.AnnotationText="Log message for the scenarios when no transaction items are found to be processed" DisplayName="Log Message (No processed transactions)" sap:VirtualizedContainerService.HintSize="416,170" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Warn" Message="[&quot;There are no processed transactions to report&quot;]">
+              <ui:LogMessage sap2010:Annotation.AnnotationText="Log message for the scenarios when no transaction items are found to be processed" DisplayName="Log Message (No processed transactions)" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Warn" Message="[&quot;There are no processed transactions to report&quot;]">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
@@ -523,13 +523,13 @@
             </Sequence>
           </If.Then>
           <If.Else>
-            <Sequence DisplayName="Sequence - Business Exception in Init" sap:VirtualizedContainerService.HintSize="450,234" sap2010:WorkflowViewState.IdRef="Sequence_16">
+            <Sequence DisplayName="Sequence - Business Exception in Init" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="Sequence_16">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage sap2010:Annotation.AnnotationText="Log message for the scenarios when no transaction items are found to be processed" DisplayName="Log Message (BE in Init)" sap:VirtualizedContainerService.HintSize="416,170" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Warn" Message="[&quot;Business Exception occured in Initialization&quot;]">
+              <ui:LogMessage sap2010:Annotation.AnnotationText="Log message for the scenarios when no transaction items are found to be processed" DisplayName="Log Message (BE in Init)" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Warn" Message="[&quot;Business Exception occured in Initialization&quot;]">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>

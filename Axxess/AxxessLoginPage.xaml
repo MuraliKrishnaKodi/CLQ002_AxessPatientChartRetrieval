@@ -52,6 +52,10 @@
       <x:String>System.Xml.Serialization</x:String>
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.OCR.Activities</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -114,9 +118,12 @@
       <AssemblyReference>System.Private.Xml</AssemblyReference>
       <AssemblyReference>System.Memory.Data</AssemblyReference>
       <AssemblyReference>UiPath.Azure</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="AxxessLoginPage" sap:VirtualizedContainerService.HintSize="1452,2155" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="AxxessLoginPage" sap:VirtualizedContainerService.HintSize="1452,2759" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="StrWorkflowName" />
     </Sequence.Variables>
@@ -147,13 +154,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="Chrome - Axxess Login" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1452,1852" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" IsIncognito="False" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.IfNotOpen]" ScopeGuid="adc4d604-787d-4133-a200-5eabd2994363" Timeout="[CInt(In_DictConfig(&quot;TimeoutLarge&quot;))]" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="Chrome - Axxess Login" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1452,2456" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" IsIncognito="False" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.IfNotOpen]" ScopeGuid="adc4d604-787d-4133-a200-5eabd2994363" Timeout="[CInt(In_DictConfig(&quot;TimeoutLarge&quot;))]" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1450,1649" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1450,2253" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -171,14 +178,14 @@
                 </ui:Target>
               </ui:Activate.Target>
             </ui:Activate>
-            <Pick DisplayName="Pick - Axxess Care Sign In" sap:VirtualizedContainerService.HintSize="1416,1470" sap2010:WorkflowViewState.IdRef="Pick_1">
+            <Pick DisplayName="Pick - Axxess Care Sign In" sap:VirtualizedContainerService.HintSize="1416,2074" sap2010:WorkflowViewState.IdRef="Pick_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <PickBranch sap2010:Annotation.AnnotationText="In case, we land on the home page. So skipping the part for entering the user credentials." DisplayName="PickBranch - Home Page Existence" sap:VirtualizedContainerService.HintSize="374,1400" sap2010:WorkflowViewState.IdRef="PickBranch_1">
+              <PickBranch sap2010:Annotation.AnnotationText="In case, we land on the home page. So skipping the part for entering the user credentials." DisplayName="PickBranch - Home Page Existence" sap:VirtualizedContainerService.HintSize="374,2004" sap2010:WorkflowViewState.IdRef="PickBranch_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -227,7 +234,7 @@
                 </PickBranch.Trigger>
                 <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,143" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="Info" Message="[&quot;Already home page exists&quot;]" />
               </PickBranch>
-              <PickBranch sap2010:Annotation.AnnotationText="Navigating from the login page by entering the right credentials." DisplayName="PickBranch - Login Page Existence" sap:VirtualizedContainerService.HintSize="574,1400" sap2010:WorkflowViewState.IdRef="PickBranch_2">
+              <PickBranch sap2010:Annotation.AnnotationText="Navigating from the login page by entering the right credentials." DisplayName="PickBranch - Login Page Existence" sap:VirtualizedContainerService.HintSize="574,2004" sap2010:WorkflowViewState.IdRef="PickBranch_2">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -236,19 +243,19 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <PickBranch.Trigger>
-                  <uix:NCheckState sap2010:Annotation.AnnotationText="To check whether the bot has reached the login page or not successfully" DelayBefore="[CInt(In_DictConfig(&quot;DelayShort&quot;))]" DisplayName="Check App State - Reached Login Page" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="484,70" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="adc4d604-787d-4133-a200-5eabd2994363" Timeout="[CInt(In_DictConfig(&quot;TimeoutLarge&quot;))]" Version="V5">
+                  <uix:NCheckState sap2010:Annotation.AnnotationText="To check whether the bot has reached the login page or not successfully" DelayBefore="[CInt(In_DictConfig(&quot;DelayShort&quot;))]" DisplayName="Check App State - Reached Login Page" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="484,674" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="adc4d604-787d-4133-a200-5eabd2994363" Timeout="[CInt(In_DictConfig(&quot;TimeoutLarge&quot;))]" Version="V5">
                     <uix:NCheckState.IfExists>
-                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,234" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="Sequence_4">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log Message - Reached Login Page Successfully" sap:VirtualizedContainerService.HintSize="416,170" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace" Message="[&quot;Reached login page successfully&quot;]" />
+                        <ui:LogMessage DisplayName="Log Message - Reached Login Page Successfully" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace" Message="[&quot;Reached login page successfully&quot;]" />
                       </Sequence>
                     </uix:NCheckState.IfExists>
                     <uix:NCheckState.IfNotExists>
-                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,94" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_5">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -261,7 +268,7 @@
                     </uix:NCheckState.Target>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                       </scg:Dictionary>
@@ -536,7 +543,7 @@
                   </uix:NCheckState>
                 </Sequence>
               </PickBranch>
-              <PickBranch sap2010:Annotation.AnnotationText="In case, we land on another page, except these the home page or login page. Then, the bot is going to throw an SE." DisplayName="PickBranch - Unknown Web Page Exists" sap:VirtualizedContainerService.HintSize="374,1400" sap2010:WorkflowViewState.IdRef="PickBranch_3">
+              <PickBranch sap2010:Annotation.AnnotationText="In case, we land on another page, except these the home page or login page. Then, the bot is going to throw an SE." DisplayName="PickBranch - Unknown Web Page Exists" sap:VirtualizedContainerService.HintSize="374,2004" sap2010:WorkflowViewState.IdRef="PickBranch_3">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>

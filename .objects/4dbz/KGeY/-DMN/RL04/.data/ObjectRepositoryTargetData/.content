@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="khzMNcHT6Ua_uqe7GgnP4Q" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="central.axxessweb.com/central-messaging/clinicians/conversation" DesignTimeRectangle="1847, 148, 44, 19" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Logout' class='text-center' tag='SPAN' /&gt;" Guid="e15a280e-0853-4d61-aad4-077f4f0227c3" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Axxess - Complete Home Health Care Software | Axxess Router' /&gt;" SearchSteps="Selector" Version="V6">
+      <imageRef attrName="InformativeScreenshot" originalValue="5d9a258c591526f1a7aa366993c81015.jpg" xmlns="">053YLxUtqs0eWauBm5NHstA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

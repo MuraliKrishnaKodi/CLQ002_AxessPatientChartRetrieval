@@ -131,21 +131,26 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
       <AssemblyReference>UiPath.MicrosoftOffice365</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CreateEMRAndUploadToBlob" sap:VirtualizedContainerService.HintSize="1281,3537" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CreateEMRAndUploadToBlob" sap:VirtualizedContainerService.HintSize="1132,4031" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="SkipItem" />
       <Variable x:TypeArguments="x:Boolean" Default="True" Name="QueueItemExists" />
       <Variable x:TypeArguments="scg:List(ui:QueueItem)" Default="[New List(Of UiPath.Core.QueueItem)]" Name="QueueItems" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtEMRData" />
+      <Variable x:TypeArguments="scg:IEnumerable(ui:QueueItem)" Name="CurrentQueueItems" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <While sap2010:Annotation.AnnotationText="Iterating while the Queue Item Exists flag is True" DisplayName="While Queue Item Exists" sap:VirtualizedContainerService.HintSize="584,1160" sap2010:WorkflowViewState.IdRef="While_1">
+    <While sap2010:Annotation.AnnotationText="Iterating while the Queue Item Exists flag is True" DisplayName="While Queue Item Exists" sap:VirtualizedContainerService.HintSize="606,1148" sap2010:WorkflowViewState.IdRef="While_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
@@ -156,17 +161,15 @@
       <While.Condition>
         <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="QueueItemExists" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_1" />
       </While.Condition>
-      <Sequence sap2010:Annotation.AnnotationText="The sequence responsible for retrieving all of the queue items" DisplayName="Sequence - Get All Queue Items" sap:VirtualizedContainerService.HintSize="538,966" sap2010:WorkflowViewState.IdRef="Sequence_2">
-        <Sequence.Variables>
-          <Variable x:TypeArguments="scg:IEnumerable(ui:QueueItem)" Name="CurrentQueueItems" />
-        </Sequence.Variables>
+      <Sequence sap2010:Annotation.AnnotationText="The sequence responsible for retrieving all of the queue items" DisplayName="Sequence - Get All Queue Items" sap:VirtualizedContainerService.HintSize="510,954" sap2010:WorkflowViewState.IdRef="Sequence_2">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:GetQueueItems From="{x:Null}" Priority="{x:Null}" To="{x:Null}" Top="{x:Null}" sap2010:Annotation.AnnotationText="Fetch the queue items which were either successful or failed where reference starts with process run date" DisplayName="Get Processed Queue Items" FilterStrategy="StartsWith" sap:VirtualizedContainerService.HintSize="504,176" sap2010:WorkflowViewState.IdRef="GetQueueItems_1" QueueItemStates="Successful" QueueName="[In_DictConfig(&quot;OrchestratorQueueName&quot;).ToString]" Reference="[CDate(In_DictConfig(&quot;RunDate&quot;).ToString).ToString(&quot;MMddyyyy&quot;) + &quot;_Allocation&quot; + intNextAllocationNumber.ToString]" Result="[CurrentQueueItems]" Skip="[SkipItem]" TimeoutMS="15000">
+        <ui:GetQueueItems From="{x:Null}" Priority="{x:Null}" To="{x:Null}" Top="{x:Null}" sap2010:Annotation.AnnotationText="Fetch the queue items which were either successful or failed where reference starts with process run date" DisplayName="Get Processed Queue Items" FilterStrategy="StartsWith" sap:VirtualizedContainerService.HintSize="476,176" sap2010:WorkflowViewState.IdRef="GetQueueItems_1" QueueItemStates="Successful" QueueName="[In_DictConfig(&quot;OrchestratorQueueName&quot;).ToString]" Reference="[CDate(In_DictConfig(&quot;RunDate&quot;).ToString).ToString(&quot;MMddyyyy&quot;) + &quot;_Allocation&quot; + intNextAllocationNumber.ToString]" Result="[CurrentQueueItems]" Skip="[SkipItem]" TimeoutMS="15000">
           <ui:GetQueueItems.Duration>
             <InArgument x:TypeArguments="s:Nullable(x:Int32)" />
           </ui:GetQueueItems.Duration>
@@ -178,7 +181,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </ui:GetQueueItems>
-        <If sap2010:Annotation.AnnotationText="Validating if queue items where retrieved for the current skip count" Condition="[CurrentQueueItems.Count = 0]" DisplayName="If no more queue items" sap:VirtualizedContainerService.HintSize="504,730" sap2010:WorkflowViewState.IdRef="If_1">
+        <If sap2010:Annotation.AnnotationText="Validating if queue items where retrieved for the current skip count" Condition="[CurrentQueueItems.Count = 0]" DisplayName="If no more queue items" sap:VirtualizedContainerService.HintSize="476,718" sap2010:WorkflowViewState.IdRef="If_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
@@ -187,7 +190,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <If.Then>
-            <Assign sap2010:Annotation.AnnotationText="Initializing the Queue Item Exists flag to False" DisplayName="Assign - Set QueueItem Exists Flag As False" sap:VirtualizedContainerService.HintSize="502,143" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign sap2010:Annotation.AnnotationText="Initializing the Queue Item Exists flag to False" DisplayName="Assign - Set QueueItem Exists Flag As False" sap:VirtualizedContainerService.HintSize="474,143" sap2010:WorkflowViewState.IdRef="Assign_1">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Boolean">[QueueItemExists]</OutArgument>
               </Assign.To>
@@ -202,7 +205,7 @@
             </Assign>
           </If.Then>
           <If.Else>
-            <Sequence sap2010:Annotation.AnnotationText="The sequence responisble for concatenating the current queue items collection to final queue items collection and increasing the skip count by 100 for next iteration" DisplayName="Sequence - Concatenate Queue Items &amp; Increment Skip Item Count" sap:VirtualizedContainerService.HintSize="502,435" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence sap2010:Annotation.AnnotationText="The sequence responisble for concatenating the current queue items collection to final queue items collection and increasing the skip count by 100 for next iteration" DisplayName="Sequence - Concatenate Queue Items &amp; Increment Skip Item Count" sap:VirtualizedContainerService.HintSize="474,423" sap2010:WorkflowViewState.IdRef="Sequence_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -210,7 +213,7 @@
                   <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:InvokeCode ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Invoking the code for concatenating the queue items" Code="Dim queueItem As UiPath.Core.QueueItem&#xA;&#xA;For Each queueItem In CurrentQueueItems&#xA;&#x9;&#xA;&#x9;QueueItems.Add(queueItem)&#xA;&#x9;&#xA;Next" DisplayName="Invoke code - Concatenate Queue Items" sap:VirtualizedContainerService.HintSize="468,201" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+              <ui:InvokeCode ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Invoking the code for concatenating the queue items" Code="Dim queueItem As UiPath.Core.QueueItem&#xA;&#xA;For Each queueItem In CurrentQueueItems&#xA;&#x9;&#xA;&#x9;QueueItems.Add(queueItem)&#xA;&#x9;&#xA;Next" DisplayName="Invoke code - Concatenate Queue Items" sap:VirtualizedContainerService.HintSize="440,197" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
                 <ui:InvokeCode.Arguments>
                   <InArgument x:TypeArguments="scg:IEnumerable(ui:QueueItem)" x:Key="CurrentQueueItems">[CurrentQueueItems]</InArgument>
                   <InOutArgument x:TypeArguments="scg:List(ui:QueueItem)" x:Key="QueueItems">[QueueItems]</InOutArgument>
@@ -223,7 +226,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:InvokeCode>
-              <Assign sap2010:Annotation.AnnotationText="Incrementing the skip count value by 100" DisplayName="Assign - Increment Skip Item By 100" sap:VirtualizedContainerService.HintSize="468,170" sap2010:WorkflowViewState.IdRef="Assign_2">
+              <Assign sap2010:Annotation.AnnotationText="Incrementing the skip count value by 100" DisplayName="Assign - Increment Skip Item By 100" sap:VirtualizedContainerService.HintSize="440,166" sap2010:WorkflowViewState.IdRef="Assign_2">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:Int32">[SkipItem]</OutArgument>
                 </Assign.To>
@@ -241,13 +244,13 @@
         </If>
       </Sequence>
     </While>
-    <ui:ForEach x:TypeArguments="ui:QueueItem" CurrentIndex="{x:Null}" DisplayName="For Each QueueItem" sap:VirtualizedContainerService.HintSize="584,1127" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[QueueItems]">
+    <ui:ForEach x:TypeArguments="ui:QueueItem" CurrentIndex="{x:Null}" DisplayName="For Each QueueItem" sap:VirtualizedContainerService.HintSize="606,1094" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[QueueItems]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="ui:QueueItem">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:QueueItem" Name="currentQueueItem" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="486,996" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="486,963" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <Sequence.Variables>
               <Variable x:TypeArguments="sd:DataTable" Name="dtAgencydata" />
               <Variable x:TypeArguments="x:String" Name="strSPFolderURL" />
@@ -258,7 +261,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <umae:ReadRangeConnections x:TypeArguments="sd:DataTable" BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentItemId="{x:Null}" BrowserSiteUrl="{x:Null}" ColumnNames="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ItemIdBackup="{x:Reference __ReferenceID0}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntrySiteUrl="{x:Null}" RangeInformation="{x:Null}" RangeMetadata="{x:Null}" TemplateBrowserDriveName="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" TemplateBrowserSiteUrl="{x:Null}" WorkbookSample="{x:Null}" AuthScopesInvalid="False" ConnectionId="7a2f8954-fd48-42d7-b3f8-ab81ed3e740a" DisplayName="Read Range - Agency Data" HasHeaders="True" sap:VirtualizedContainerService.HintSize="452,299" sap2010:WorkflowViewState.IdRef="ReadRangeConnections`1_1" ItemSelectionMode="ItemUrl" ManualEntryItemUrl="[currentQueueItem.Output(&quot;Output Excel File URL&quot;).ToString]" Range="Allocation Upload" RangeMode="Default" ReadAs="Values" Result="[dtAgencydata]" UseConnectionService="True" WorkingWithTemplateWorkbook="False">
+            <umae:ReadRangeConnections x:TypeArguments="sd:DataTable" BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentItemId="{x:Null}" BrowserSiteUrl="{x:Null}" ColumnNames="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ItemIdBackup="{x:Reference __ReferenceID0}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntrySiteUrl="{x:Null}" RangeInformation="{x:Null}" RangeMetadata="{x:Null}" TemplateBrowserDriveName="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" TemplateBrowserSiteUrl="{x:Null}" WorkbookSample="{x:Null}" AuthScopesInvalid="False" ConnectionId="b0fe217d-e89d-4be1-8ceb-33db9e950228" DisplayName="Read Range - Agency Data" HasHeaders="True" sap:VirtualizedContainerService.HintSize="452,290" sap2010:WorkflowViewState.IdRef="ReadRangeConnections`1_1" ItemSelectionMode="ItemUrl" ManualEntryItemUrl="[currentQueueItem.Output(&quot;Output Excel File URL&quot;).ToString]" Range="Allocation Upload" RangeMode="Default" ReadAs="Values" Result="[dtAgencydata]" UseConnectionService="True" WorkingWithTemplateWorkbook="False">
               <umae:ReadRangeConnections.DriveItemArgument>
                 <umafm:DriveItemArgument BrowserDriveId="{x:Null}" BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentDriveId="{x:Null}" BrowserParentDriveName="{x:Null}" BrowserParentItemFriendlyName="{x:Null}" BrowserParentItemId="{x:Null}" BrowserParentPath="{x:Null}" BrowserSiteUrl="{x:Null}" BrowserSpecificUrl="{x:Null}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Item="{x:Null}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntrySiteUrl="{x:Null}" ReferenceId="{x:Null}" FullPathHint="" ItemSelectionMode="ItemUrl" ManualEntryItemUrl="[currentQueueItem.Output(&quot;Output Excel File URL&quot;).ToString]" ParentFullPathHint="">
                   <umafm:DriveItemArgument.ItemIdBackup>
@@ -294,7 +297,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </umae:ReadRangeConnections>
-            <If Condition="[dtEMRData is Nothing]" DisplayName="If - Datatable is Empty" sap:VirtualizedContainerService.HintSize="452,471" sap2010:WorkflowViewState.IdRef="If_2">
+            <If Condition="[dtEMRData is Nothing]" DisplayName="If - Datatable is Empty" sap:VirtualizedContainerService.HintSize="452,455" sap2010:WorkflowViewState.IdRef="If_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -302,13 +305,13 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,234" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="Sequence_7">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Assign DisplayName="Assign - Copy Columns" sap:VirtualizedContainerService.HintSize="416,170" sap2010:WorkflowViewState.IdRef="Assign_3">
+                  <Assign DisplayName="Assign - Copy Columns" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="Assign_3">
                     <Assign.To>
                       <OutArgument x:TypeArguments="sd:DataTable">[dtEMRData]</OutArgument>
                     </Assign.To>
@@ -319,7 +322,7 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,94" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_8">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -328,18 +331,18 @@
                 </Sequence>
               </If.Else>
             </If>
-            <ui:MergeDataTable Destination="[dtEMRData]" DisplayName="Merge Agency Data to EMR" sap:VirtualizedContainerService.HintSize="452,162" sap2010:WorkflowViewState.IdRef="MergeDataTable_1" MissingSchemaAction="Add" Source="[dtAgencydata]" />
+            <ui:MergeDataTable Destination="[dtEMRData]" DisplayName="Merge Agency Data to EMR" sap:VirtualizedContainerService.HintSize="452,158" sap2010:WorkflowViewState.IdRef="MergeDataTable_1" MissingSchemaAction="Add" Source="[dtAgencydata]" />
           </Sequence>
         </ActivityAction>
       </ui:ForEach.Body>
     </ui:ForEach>
-    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="584,766" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="606,1030" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
       <ueab:ExcelProcessScopeX.Body>
         <ActivityAction x:TypeArguments="ui:IExcelProcess">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="536,647" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="572,911" sap2010:WorkflowViewState.IdRef="Sequence_5">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="strAllocationNumber" />
             </Sequence.Variables>
@@ -348,25 +351,45 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="502,583" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" SensitivityOperation="None" WorkbookPath="[Path.Combine(In_DictConfig(&quot;StrDownloadExcelFilePath&quot;).ToString,&quot;AxxessEMR_&quot;+CDate(In_DictConfig(&quot;RunDate&quot;)).ToString(&quot;MMddyyyy&quot;)+&quot;_&quot;+intNextAllocationNumber.ToString+&quot;.xlsx&quot;)]">
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="538,851" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" SensitivityOperation="None" WorkbookPath="[Path.Combine(In_DictConfig(&quot;StrDownloadExcelFilePath&quot;).ToString,&quot;AxxessEMR_&quot;+CDate(In_DictConfig(&quot;RunDate&quot;)).ToString(&quot;MMddyyyy&quot;)+&quot;_&quot;+intNextAllocationNumber.ToString+&quot;.xlsx&quot;)]">
               <ueab:ExcelApplicationCard.Body>
                 <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="468,283" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="504,555" sap2010:WorkflowViewState.IdRef="Sequence_6">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ueab:WriteRangeX sap2010:Annotation.AnnotationText="" Destination="[Excel.Sheet(&quot;Allocation Upload&quot;).Range(&quot;A1&quot;)]" DisplayName="Write DataTable to Excel" sap:VirtualizedContainerService.HintSize="434,219" sap2010:WorkflowViewState.IdRef="WriteRangeX_1" IgnoreEmptySource="False" Source="[dtEMRData]">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </ueab:WriteRangeX>
+                    <If Condition="[CurrentQueueItems.Count &gt; 0]" sap:VirtualizedContainerService.HintSize="470,495" sap2010:WorkflowViewState.IdRef="If_4">
+                      <If.Then>
+                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="468,275" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ueab:WriteRangeX sap2010:Annotation.AnnotationText="" Destination="[Excel.Sheet(&quot;Allocation Upload&quot;).Range(&quot;A1&quot;)]" DisplayName="Write DataTable to Excel" sap:VirtualizedContainerService.HintSize="434,215" sap2010:WorkflowViewState.IdRef="WriteRangeX_1" IgnoreEmptySource="False" Source="[dtEMRData]">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ueab:WriteRangeX>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="468,90" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Sequence>
+                      </If.Else>
+                    </If>
                   </Sequence>
                 </ActivityAction>
               </ueab:ExcelApplicationCard.Body>
@@ -381,7 +404,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ueab:ExcelProcessScopeX>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="UploadFileToBlobStorage - Invoke Workflow File (Workflows\UploadFileToBlobStorage.xaml)" sap:VirtualizedContainerService.HintSize="584,182" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Workflows\UploadFileToBlobStorage.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="UploadFileToBlobStorage - Invoke Workflow File (Workflows\UploadFileToBlobStorage.xaml)" sap:VirtualizedContainerService.HintSize="606,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Workflows\UploadFileToBlobStorage.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="In_DictConfig">[In_DictConfig]</InArgument>
         <OutArgument x:TypeArguments="x:String" x:Key="Out_StrBlobObjectUrl">[out_strEMRFileURL]</OutArgument>
@@ -395,7 +418,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:DeleteFileX DisplayName="Delete EMR File" sap:VirtualizedContainerService.HintSize="584,113" sap2010:WorkflowViewState.IdRef="DeleteFileX_2" Path="[Path.Combine(In_DictConfig(&quot;StrDownloadExcelFilePath&quot;).ToString,&quot;AxxessEMR_&quot;+CDate(In_DictConfig(&quot;RunDate&quot;)).ToString(&quot;MMddyyyy&quot;)+&quot;_&quot;+intNextAllocationNumber.ToString+&quot;.xlsx&quot;)]">
+    <ui:DeleteFileX DisplayName="Delete EMR File" sap:VirtualizedContainerService.HintSize="606,113" sap2010:WorkflowViewState.IdRef="DeleteFileX_2" Path="[Path.Combine(In_DictConfig(&quot;StrDownloadExcelFilePath&quot;).ToString,&quot;AxxessEMR_&quot;+CDate(In_DictConfig(&quot;RunDate&quot;)).ToString(&quot;MMddyyyy&quot;)+&quot;_&quot;+intNextAllocationNumber.ToString+&quot;.xlsx&quot;)]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -403,6 +426,26 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:DeleteFileX>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="584,166" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Total row counts in EMR file - &quot;+dtEMRData.RowCount.ToString]" />
+    <If Condition="[CurrentQueueItems.Count &gt; 0]" sap:VirtualizedContainerService.HintSize="606,446" sap2010:WorkflowViewState.IdRef="If_5">
+      <If.Then>
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Total row counts in EMR file - &quot;+dtEMRData.RowCount.ToString]" />
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_12">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Else>
+    </If>
   </Sequence>
 </Activity>

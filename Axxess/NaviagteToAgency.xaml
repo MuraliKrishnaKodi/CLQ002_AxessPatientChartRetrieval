@@ -109,7 +109,7 @@
       <AssemblyReference>UiPath.Azure</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="NaviagteToAgency" sap:VirtualizedContainerService.HintSize="1137,2623" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="NaviagteToAgency" sap:VirtualizedContainerService.HintSize="1132,2792" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="StrWorkflowName" />
     </Sequence.Variables>
@@ -132,7 +132,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="InitAllSettings - Invoke Workflow File (Framework\InitAllSettings.xaml)" sap:VirtualizedContainerService.HintSize="478,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework\InitAllSettings.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="InitAllSettings - Invoke Workflow File (Framework\InitAllSettings.xaml)" sap:VirtualizedContainerService.HintSize="478,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework\InitAllSettings.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <InArgument x:TypeArguments="s:DateTime" x:Key="in_StartTime">2026-02-11</InArgument>
                 <InArgument x:TypeArguments="x:String" x:Key="in_ConfigFile">Data\Config.xlsx</InArgument>
@@ -173,13 +173,13 @@
       </Assign.Value>
     </Assign>
     <ui:LogMessage DisplayName="Log Message - Workflow Has Started" sap:VirtualizedContainerService.HintSize="488,175" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[String.Format(&quot;Workflow: {0} has started&quot;, StrWorkflowName)]" />
-    <uix:NApplicationCard sap2010:Annotation.AnnotationText="For navigating to respective agency" AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="Chrome - Axxess Homepage" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="488,2027" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" IsIncognito="True" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.IfNotOpen]" ScopeGuid="d4589d81-f937-46af-bfe5-10fbf37306b2" Timeout="[CInt(In_DictConfig(&quot;TimeoutLarge&quot;))]" Version="V2">
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="For navigating to respective agency" AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="Chrome - Axxess Homepage" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="488,2196" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" IsIncognito="True" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.IfNotOpen]" ScopeGuid="d4589d81-f937-46af-bfe5-10fbf37306b2" Timeout="[CInt(In_DictConfig(&quot;TimeoutLarge&quot;))]" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="486,1793" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="486,1962" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -278,15 +278,15 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NCheckState>
-            <ui:LogMessage DisplayName="Log Message - Navigating to Agency" sap:VirtualizedContainerService.HintSize="452,57" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Naviagting to &quot; + In_StrAgencyName]">
+            <ui:LogMessage DisplayName="Log Message - Navigating to Agency" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Naviagting to &quot; + In_StrAgencyName]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:LogMessage>
-            <uix:NCheckState sap2010:Annotation.AnnotationText="Checking whether the agency exists or not in the first palce before clicking on it." DisplayName="Check App State 'Button - Agency Name'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,1337" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="d4589d81-f937-46af-bfe5-10fbf37306b2" Timeout="[CInt(In_DictConfig(&quot;TimeoutShort&quot;))]" Version="V5">
+            <uix:NCheckState sap2010:Annotation.AnnotationText="Checking whether the agency exists or not in the first palce before clicking on it." DelayBefore="5" DisplayName="Check App State 'Button - Agency Name'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,1388" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="d4589d81-f937-46af-bfe5-10fbf37306b2" Timeout="[CInt(In_DictConfig(&quot;TimeoutShort&quot;))]" Version="V5">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,420" sap2010:WorkflowViewState.IdRef="Sequence_11">
                   <sap:WorkflowViewStateService.ViewState>
@@ -294,9 +294,9 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="[CInt(In_DictConfig(&quot;DelayShort&quot;))]" DisplayName="Click 'Button - Agency Name'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,194" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d4589d81-f937-46af-bfe5-10fbf37306b2" Timeout="[CInt(In_DictConfig(&quot;TimeoutMedium&quot;))]" Version="V5">
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="[CInt(In_DictConfig(&quot;DelayShort&quot;))]" DisplayName="Click 'Button - Agency Name'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="416,194" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d4589d81-f937-46af-bfe5-10fbf37306b2" Timeout="[CInt(In_DictConfig(&quot;TimeoutMedium&quot;))]" Version="V5">
                     <uix:NClick.Target>
-                      <uix:TargetAnchorable BrowserURL="central.axxessweb.com/clinician" CVScreenId="a422febd-209c-4363-817c-117b72d0b6c2" ContentHash="LNqthz12tUS6-Jl2BrY0yg" DesignTimeRectangle="8, 458, 306, 40" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="[string.Format(&quot;&lt;webctrl aaname='*{0}*' tag='BUTTON' /&gt;&quot;, In_StrAgencyName)]" Guid="24e572d1-ceb8-40c4-ac29-3d9b7c41d9f9" InformativeScreenshot="72fa19303c28cc644f6c4f4b2f45d360.png" Reference="rYh6cYecTEitmrbdMA9QUg/7HqyXHqQDEOSebU8D_2fsQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='central.axxessweb.com*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                      <uix:TargetAnchorable BrowserURL="central.axxessweb.com/clinician" CVScreenId="a422febd-209c-4363-817c-117b72d0b6c2" ContentHash="gbawZy_nAEO-kquSXEG0KA" DesignTimeRectangle="8, 458, 306, 40" ElementType="Button" ElementVisibilityArgument="None" FullSelectorArgument="[string.Format(&quot;&lt;webctrl aaname='*{0}*' tag='BUTTON' /&gt;&quot;, In_StrAgencyName)]" Guid="24e572d1-ceb8-40c4-ac29-3d9b7c41d9f9" InformativeScreenshot="72fa19303c28cc644f6c4f4b2f45d360.png" Reference="rYh6cYecTEitmrbdMA9QUg/7HqyXHqQDEOSebU8D_2fsQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='central.axxessweb.com*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="[UiPath.UIAutomationNext.Enums.NWaitForReady.Complete]" />
                     </uix:NClick.Target>
                   </uix:NClick>
                   <ui:LogMessage DisplayName="Log Message - Clicked on Agency Name" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;Clicked on &quot; + In_StrAgencyName + &quot; Agency Name&quot;]" />
@@ -310,7 +310,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:LogMessage DisplayName="Log Message - Business Rule Exception" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Error" Message="[New BusinessRuleException(&quot;There is no agency that exists for '&quot; + In_StrAgencyName.ToString + &quot;' agency on the axxess home dashboard&quot;)]" />
-                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Logging out before throwing a business exception since killing the process while we were logged in and create a vulnerability for the next run." DisplayName="CloseAllApplications - Invoke Workflow File (Framework\CloseAllApplications.xaml)" sap:VirtualizedContainerService.HintSize="416,238" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Framework\CloseAllApplications.xaml">
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" sap2010:Annotation.AnnotationText="Logging out before throwing a business exception since killing the process while we were logged in and create a vulnerability for the next run." DisplayName="CloseAllApplications - Invoke Workflow File (Framework\CloseAllApplications.xaml)" sap:VirtualizedContainerService.HintSize="416,238" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Framework\CloseAllApplications.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
                       <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="In_DictConfig">[In_DictConfig]</InArgument>
                     </ui:InvokeWorkflowFile.Arguments>
@@ -331,7 +331,7 @@
                 </Sequence>
               </uix:NCheckState.IfNotExists>
               <uix:NCheckState.Target>
-                <uix:TargetAnchorable BrowserURL="central.axxessweb.com/clinician" CVScreenId="a422febd-209c-4363-817c-117b72d0b6c2" ContentHash="LNqthz12tUS6-Jl2BrY0yg" DesignTimeRectangle="8, 458, 306, 40" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="[string.Format(&quot;&lt;webctrl aaname='*{0}*' tag='BUTTON' /&gt;&quot;, In_StrAgencyName)]" Guid="24e572d1-ceb8-40c4-ac29-3d9b7c41d9f9" InformativeScreenshot="72fa19303c28cc644f6c4f4b2f45d360.png" Reference="rYh6cYecTEitmrbdMA9QUg/7HqyXHqQDEOSebU8D_2fsQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='central.axxessweb.com*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                <uix:TargetAnchorable BrowserURL="central.axxessweb.com/clinician" CVScreenId="a422febd-209c-4363-817c-117b72d0b6c2" ContentHash="gbawZy_nAEO-kquSXEG0KA" DesignTimeRectangle="8, 458, 306, 40" ElementType="Button" ElementVisibilityArgument="None" FullSelectorArgument="[string.Format(&quot;&lt;webctrl aaname='*{0}*' tag='BUTTON' /&gt;&quot;, In_StrAgencyName)]" Guid="24e572d1-ceb8-40c4-ac29-3d9b7c41d9f9" InformativeScreenshot="72fa19303c28cc644f6c4f4b2f45d360.png" Reference="rYh6cYecTEitmrbdMA9QUg/7HqyXHqQDEOSebU8D_2fsQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='central.axxessweb.com*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="[UiPath.UIAutomationNext.Enums.NWaitForReady.Complete]" />
               </uix:NCheckState.Target>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">

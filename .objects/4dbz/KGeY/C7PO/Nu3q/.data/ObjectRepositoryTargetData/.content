@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="fjpxrkqF0kCBYPdx_Lc_yg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="central.axxessweb.com/central-messaging/clinicians/conversation" CVScreenId="039ddc1b-2856-4bb4-b841-c4d0561486ed" CvTextArea="1845, 150, 48, 16" CvTextArgument="Logout" CvType="Text" DesignTimeRectangle="1847, 148, 44, 19" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Logout' class='text-center' tag='SPAN' /&gt;" Guid="9929114d-e307-4789-b828-407e1016d0f6" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Axxess - Complete Home Health Care Software | Axxess Router' /&gt;" SearchSteps="Selector, CV" Version="V6">
+      <imageRef attrName="InformativeScreenshot" originalValue="48724635b71e2cbceb2d2a579c960be5.jpg" xmlns="">0BM_DqmVQaUyur2BDujmTJQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
