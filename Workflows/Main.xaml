@@ -151,7 +151,7 @@
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <StateMachine InitialState="{x:Reference __ReferenceID4}" sap2010:Annotation.AnnotationText="Axxess&#xA;Phase 1 Project&#xA;Deergh Kataria" DisplayName="General Business Process" sap:VirtualizedContainerService.HintSize="1138,806" sap2010:WorkflowViewState.IdRef="StateMachine_1">
+  <StateMachine InitialState="{x:Reference __ReferenceID5}" sap2010:Annotation.AnnotationText="Axxess&#xA;Phase 1 Project&#xA;Deergh Kataria" DisplayName="General Business Process" sap:VirtualizedContainerService.HintSize="1138,648" sap2010:WorkflowViewState.IdRef="StateMachine_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -162,7 +162,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Get the next transaction to be processed." DisplayName="Get Transaction Data" sap:VirtualizedContainerService.HintSize="229,110" sap2010:WorkflowViewState.IdRef="State_4">
+    <State x:Name="__ReferenceID4" sap2010:Annotation.AnnotationText="Get the next transaction to be processed." DisplayName="Get Transaction Data" sap:VirtualizedContainerService.HintSize="229,110" sap2010:WorkflowViewState.IdRef="State_4">
       <State.Entry>
         <Sequence sap2010:Annotation.AnnotationText="Retrieve a new transaction data to be processed.&#xA;The TransactionNumber variable holds the current transaction number and incrementing this variable makes the framework retrieve the next transaction. If the framework is retrying a failed transaction, this variable is not incremented until the maximum number of retry attempts is reached." DisplayName="Retrieve Data" sap:VirtualizedContainerService.HintSize="522,1278" sap2010:WorkflowViewState.IdRef="Sequence_25">
           <Sequence.Variables>
@@ -306,7 +306,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Transition.To>
-            <State x:Name="__ReferenceID6" sap2010:Annotation.AnnotationText="Process a single transaction. &#xA;The result of the processing can be: 1) Success, 2) Business Exception, 3) System Exception. &#xA;In the case of a system exception, the transaction can be automatically retried." DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="240,192" sap2010:WorkflowViewState.IdRef="State_3">
+            <State x:Name="__ReferenceID7" sap2010:Annotation.AnnotationText="Process a single transaction. &#xA;The result of the processing can be: 1) Success, 2) Business Exception, 3) System Exception. &#xA;In the case of a system exception, the transaction can be automatically retried." DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="240,192" sap2010:WorkflowViewState.IdRef="State_3">
               <State.Entry>
                 <TryCatch DisplayName="Try to process transaction" sap:VirtualizedContainerService.HintSize="488,2849" sap2010:WorkflowViewState.IdRef="TryCatch_9">
                   <sap:WorkflowViewStateService.ViewState>
@@ -644,7 +644,7 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <Transition.Condition>[SystemException Is Nothing And BusinessException is Nothing]</Transition.Condition>
                   <Transition.To>
-                    <State x:Name="__ReferenceID4" sap2010:Annotation.AnnotationText="Read configuration file and initialize applications used in the process." DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="232,121" sap2010:WorkflowViewState.IdRef="State_2">
+                    <State x:Name="__ReferenceID5" sap2010:Annotation.AnnotationText="Read configuration file and initialize applications used in the process." DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="232,121" sap2010:WorkflowViewState.IdRef="State_2">
                       <State.Entry>
                         <TryCatch DisplayName="Try initializing settings and applications" sap:VirtualizedContainerService.HintSize="488,1744" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                           <sap:WorkflowViewStateService.ViewState>
@@ -1071,9 +1071,9 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <Transition.To>
-                            <State x:Name="__ReferenceID5" sap2010:Annotation.AnnotationText="End process and close all applications used." DisplayName="End Process" sap:VirtualizedContainerService.HintSize="534,2199" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
+                            <State x:Name="__ReferenceID6" sap2010:Annotation.AnnotationText="End process and close all applications used." DisplayName="End Process" sap:VirtualizedContainerService.HintSize="534,2199" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
                               <State.Entry>
-                                <TryCatch DisplayName="Try to close all aplications" sap:VirtualizedContainerService.HintSize="488,2053" sap2010:WorkflowViewState.IdRef="TryCatch_13">
+                                <TryCatch DisplayName="Try to close all aplications" sap:VirtualizedContainerService.HintSize="488,3046" sap2010:WorkflowViewState.IdRef="TryCatch_13">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1212,15 +1212,50 @@
                                         <ActivityAction.Argument>
                                           <DelegateInArgument x:TypeArguments="s:Exception" Name="Exception" />
                                         </ActivityAction.Argument>
-                                        <Sequence DisplayName="Failed to close applications, so kill processes" sap:VirtualizedContainerService.HintSize="486,25" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                                        <Sequence DisplayName="Failed to close applications, so kill processes" sap:VirtualizedContainerService.HintSize="486,1018" sap2010:WorkflowViewState.IdRef="Sequence_26">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ui:LogMessage DisplayName="Log message (Failed to close applications)" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_31" Level="Warn" Message="[&quot;Applications failed to close gracefully. &quot;+Exception.Message+&quot; at Source: &quot;+Exception.Source]" />
-                                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="Invoke KillAllProcesses workflow (End process)" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_22" UnSafe="False" WorkflowFileName="Framework\KillAllProcesses.xaml">
+                                          <ui:LogMessage DisplayName="Log message (Failed to close applications)" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="LogMessage_31" Level="Warn" Message="[&quot;Applications failed to close gracefully. &quot;+Exception.Message+&quot; at Source: &quot;+Exception.Source]" />
+                                          <Assign sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="Assign_34">
+                                            <Assign.To>
+                                              <OutArgument x:TypeArguments="x:String">[StrException]</OutArgument>
+                                            </Assign.To>
+                                            <Assign.Value>
+                                              <InArgument x:TypeArguments="x:String">[Exception.Message+" at Source: "+Exception.Source]</InArgument>
+                                            </Assign.Value>
+                                          </Assign>
+                                          <umam:SendMailConnections ArgumentAttachmentPaths="{x:Null}" AttachmentList="{x:Null}" AttachmentPaths="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" Mailbox="{x:Null}" MailboxBackup="{x:Reference __ReferenceID2}" ReplyTo="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="Existing" AuthScopesInvalid="False" Body="[DictConfig(&quot;ExceptionEmailBody&quot;).ToString.Replace(&quot;{SystemException}&quot;,StrException)]" ConnectionId="1a1c0ce5-fcfb-40a2-8a3b-98fbc73918d6" DisplayName="Send Status Email - Bot Failing Due to System Exception" sap:VirtualizedContainerService.HintSize="452,440" sap2010:WorkflowViewState.IdRef="SendMailConnections_4" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="[DictConfig(&quot;StatusEmailSubject&quot;).ToString]" To="[DictConfig(&quot;BusinessEmailRecipients&quot;).ToString.Split(&quot;;&quot;).Select(Function(s) s.Trim).ToArray]" UseConnectionService="True" UseSharedMailbox="False">
+                                            <umam:SendMailConnections.AttachmentsBackup>
+                                              <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="Existing">
+                                                <usau:BackupSlot.BackupValues>
+                                                  <scg:Dictionary x:TypeArguments="umame:AttachmentInputMode, scg:List(x:Object)" />
+                                                </usau:BackupSlot.BackupValues>
+                                              </usau:BackupSlot>
+                                            </umam:SendMailConnections.AttachmentsBackup>
+                                            <umam:SendMailConnections.InputTypeBackup>
+                                              <usau:BackupSlot x:TypeArguments="umame:BodyInputType" StoredValue="HTML">
+                                                <usau:BackupSlot.BackupValues>
+                                                  <scg:Dictionary x:TypeArguments="umame:BodyInputType, scg:List(x:Object)" />
+                                                </usau:BackupSlot.BackupValues>
+                                              </usau:BackupSlot>
+                                            </umam:SendMailConnections.InputTypeBackup>
+                                            <umam:SendMailConnections.MailboxArg>
+                                              <umamm:MailboxArgument SharedMailbox="{x:Null}" UseSharedMailbox="False">
+                                                <umamm:MailboxArgument.Backup>
+                                                  <usau:BackupSlot x:TypeArguments="umame:MailboxSelectionMode" x:Name="__ReferenceID2" StoredValue="NoMailbox">
+                                                    <usau:BackupSlot.BackupValues>
+                                                      <scg:Dictionary x:TypeArguments="umame:MailboxSelectionMode, scg:List(x:Object)" />
+                                                    </usau:BackupSlot.BackupValues>
+                                                  </usau:BackupSlot>
+                                                </umamm:MailboxArgument.Backup>
+                                              </umamm:MailboxArgument>
+                                            </umam:SendMailConnections.MailboxArg>
+                                          </umam:SendMailConnections>
+                                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="Invoke KillAllProcesses workflow (End process)" sap:VirtualizedContainerService.HintSize="452,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_22" UnSafe="False" WorkflowFileName="Framework\KillAllProcesses.xaml">
                                             <ui:InvokeWorkflowFile.Arguments>
                                               <InArgument x:TypeArguments="x:String" x:Key="in_strProcessNames">[DictConfig("ProcessesToKill").ToString]</InArgument>
                                             </ui:InvokeWorkflowFile.Arguments>
@@ -1250,7 +1285,7 @@
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <umam:SendMailConnections ArgumentAttachmentPaths="{x:Null}" AttachmentList="{x:Null}" AttachmentPaths="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" Mailbox="{x:Null}" MailboxBackup="{x:Reference __ReferenceID2}" ReplyTo="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="Existing" AuthScopesInvalid="False" Body="[DictConfig(&quot;ExceptionEmailBody&quot;).ToString.Replace(&quot;{SystemException}&quot;,SystemException.ToString)]" ConnectionId="1a1c0ce5-fcfb-40a2-8a3b-98fbc73918d6" DisplayName="Send Status Email - Bot Failing Due to System Exception" sap:VirtualizedContainerService.HintSize="416,540" sap2010:WorkflowViewState.IdRef="SendMailConnections_3" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="[DictConfig(&quot;StatusEmailSubject&quot;).ToString]" To="[DictConfig(&quot;BusinessEmailRecipients&quot;).ToString.Split(&quot;;&quot;).Select(Function(s) s.Trim).ToArray]" UseConnectionService="True" UseSharedMailbox="False">
+                                            <umam:SendMailConnections ArgumentAttachmentPaths="{x:Null}" AttachmentList="{x:Null}" AttachmentPaths="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" Mailbox="{x:Null}" MailboxBackup="{x:Reference __ReferenceID3}" ReplyTo="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="Existing" AuthScopesInvalid="False" Body="[DictConfig(&quot;ExceptionEmailBody&quot;).ToString.Replace(&quot;{SystemException}&quot;,SystemException.ToString)]" ConnectionId="1a1c0ce5-fcfb-40a2-8a3b-98fbc73918d6" DisplayName="Send Status Email - Bot Failing Due to System Exception" sap:VirtualizedContainerService.HintSize="416,540" sap2010:WorkflowViewState.IdRef="SendMailConnections_3" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="[DictConfig(&quot;StatusEmailSubject&quot;).ToString]" To="[DictConfig(&quot;BusinessEmailRecipients&quot;).ToString.Split(&quot;;&quot;).Select(Function(s) s.Trim).ToArray]" UseConnectionService="True" UseSharedMailbox="False">
                                               <umam:SendMailConnections.AttachmentsBackup>
                                                 <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="Existing">
                                                   <usau:BackupSlot.BackupValues>
@@ -1268,7 +1303,7 @@
                                               <umam:SendMailConnections.MailboxArg>
                                                 <umamm:MailboxArgument SharedMailbox="{x:Null}" UseSharedMailbox="False">
                                                   <umamm:MailboxArgument.Backup>
-                                                    <usau:BackupSlot x:TypeArguments="umame:MailboxSelectionMode" x:Name="__ReferenceID2" StoredValue="NoMailbox">
+                                                    <usau:BackupSlot x:TypeArguments="umame:MailboxSelectionMode" x:Name="__ReferenceID3" StoredValue="NoMailbox">
                                                       <usau:BackupSlot.BackupValues>
                                                         <scg:Dictionary x:TypeArguments="umame:MailboxSelectionMode, scg:List(x:Object)" />
                                                       </usau:BackupSlot.BackupValues>
@@ -1312,6 +1347,9 @@
                                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
+                              <State.Variables>
+                                <Variable x:TypeArguments="x:String" Name="StrException" />
+                              </State.Variables>
                             </State>
                           </Transition.To>
                           <Transition.Action>
@@ -1329,7 +1367,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <Transition.To>
-                            <x:Reference>__ReferenceID3</x:Reference>
+                            <x:Reference>__ReferenceID4</x:Reference>
                           </Transition.To>
                           <Transition.Action>
                             <ui:Comment DisplayName="Comment (default transition)" sap:VirtualizedContainerService.HintSize="348.8,76" sap2010:WorkflowViewState.IdRef="Comment_1" Text="Default transition is picked up if there are no errors during initialization" />
@@ -1351,7 +1389,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <Transition.To>
-                    <x:Reference>__ReferenceID4</x:Reference>
+                    <x:Reference>__ReferenceID5</x:Reference>
                   </Transition.To>
                   <Transition.Condition>[BusinessException IsNot Nothing]</Transition.Condition>
                 </Transition>
@@ -1365,7 +1403,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <Transition.To>
-                    <x:Reference>__ReferenceID4</x:Reference>
+                    <x:Reference>__ReferenceID5</x:Reference>
                   </Transition.To>
                   <Transition.Condition>[SystemException IsNot Nothing]</Transition.Condition>
                 </Transition>
@@ -1388,7 +1426,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Transition.To>
-            <x:Reference>__ReferenceID5</x:Reference>
+            <x:Reference>__ReferenceID6</x:Reference>
           </Transition.To>
           <Transition.Action>
             <ui:LogMessage DisplayName="Log message (No more transations available)" sap:VirtualizedContainerService.HintSize="348.8,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_30" Level="Info" Message="[&quot;Process finished due to no more transaction data&quot;]" />
@@ -1397,9 +1435,9 @@
         </Transition>
       </State.Transitions>
     </State>
+    <x:Reference>__ReferenceID7</x:Reference>
     <x:Reference>__ReferenceID6</x:Reference>
     <x:Reference>__ReferenceID5</x:Reference>
-    <x:Reference>__ReferenceID4</x:Reference>
     <StateMachine.Variables>
       <Variable x:TypeArguments="ui:QueueItem" sap2010:Annotation.AnnotationText="Transaction item to be processed. The type of this variable can be changed to match the transaction type in the process. For example, when processing data from a spreadsheet that is read into a DataTable, this type can be changed to DataRow. " Name="TransactionItem" />
       <Variable x:TypeArguments="s:Exception" sap2010:Annotation.AnnotationText="Used during transitions between states to represent exceptions other than business exceptions." Name="SystemException" />

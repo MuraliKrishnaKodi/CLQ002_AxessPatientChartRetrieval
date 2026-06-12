@@ -138,7 +138,7 @@
       <AssemblyReference>Studio.Generated.TypedDataTable1</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CreateEMRAndUploadToBlob" sap:VirtualizedContainerService.HintSize="1038,4720" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CreateEMRAndUploadToBlob" sap:VirtualizedContainerService.HintSize="1132,4978" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="SkipItem" />
       <Variable x:TypeArguments="x:Boolean" Default="True" Name="QueueItemExists" />
@@ -245,21 +245,21 @@
         </If>
       </Sequence>
     </While>
-    <If Condition="[QueueItems.Count&gt;0]" DisplayName="If - Successful Items Exists" sap:VirtualizedContainerService.HintSize="606,1783" sap2010:WorkflowViewState.IdRef="If_6">
+    <If Condition="[QueueItems.Count&gt;0]" DisplayName="If - Successful Items Exists" sap:VirtualizedContainerService.HintSize="606,2041" sap2010:WorkflowViewState.IdRef="If_6">
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="522,1369" sap2010:WorkflowViewState.IdRef="Sequence_13">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="522,1627" sap2010:WorkflowViewState.IdRef="Sequence_13">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:ForEach x:TypeArguments="ui:QueueItem" CurrentIndex="{x:Null}" DisplayName="For Each QueueItem" sap:VirtualizedContainerService.HintSize="488,1094" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[QueueItems]">
+          <ui:ForEach x:TypeArguments="ui:QueueItem" CurrentIndex="{x:Null}" DisplayName="For Each QueueItem" sap:VirtualizedContainerService.HintSize="488,1352" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[QueueItems]">
             <ui:ForEach.Body>
               <ActivityAction x:TypeArguments="ui:QueueItem">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="ui:QueueItem" Name="currentQueueItem" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="486,963" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="486,1221" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="sd:DataTable" Name="dtAgencydata" />
                     <Variable x:TypeArguments="x:String" Name="strSPFolderURL" />
@@ -270,42 +270,58 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <umae:ReadRangeConnections x:TypeArguments="sd:DataTable" BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentItemId="{x:Null}" BrowserSiteUrl="{x:Null}" ColumnNames="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ItemIdBackup="{x:Reference __ReferenceID0}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntrySiteUrl="{x:Null}" RangeInformation="{x:Null}" RangeMetadata="{x:Null}" TemplateBrowserDriveName="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" TemplateBrowserSiteUrl="{x:Null}" WorkbookSample="{x:Null}" AuthScopesInvalid="False" ConnectionId="b0fe217d-e89d-4be1-8ceb-33db9e950228" DisplayName="Read Range - Agency Data" HasHeaders="True" sap:VirtualizedContainerService.HintSize="452,290" sap2010:WorkflowViewState.IdRef="ReadRangeConnections`1_1" ItemSelectionMode="ItemUrl" ManualEntryItemUrl="[currentQueueItem.Output(&quot;Output Excel File URL&quot;).ToString]" Range="Allocation Upload" RangeMode="Default" ReadAs="Values" Result="[dtAgencydata]" UseConnectionService="True" WorkingWithTemplateWorkbook="False">
-                    <umae:ReadRangeConnections.DriveItemArgument>
-                      <umafm:DriveItemArgument BrowserDriveId="{x:Null}" BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentDriveId="{x:Null}" BrowserParentDriveName="{x:Null}" BrowserParentItemFriendlyName="{x:Null}" BrowserParentItemId="{x:Null}" BrowserParentPath="{x:Null}" BrowserSiteUrl="{x:Null}" BrowserSpecificUrl="{x:Null}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Item="{x:Null}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntrySiteUrl="{x:Null}" ReferenceId="{x:Null}" FullPathHint="" ItemSelectionMode="ItemUrl" ManualEntryItemUrl="[currentQueueItem.Output(&quot;Output Excel File URL&quot;).ToString]" ParentFullPathHint="">
-                        <umafm:DriveItemArgument.ItemIdBackup>
-                          <usau:BackupSlot x:TypeArguments="umafe:EDriveItemMode" x:Name="__ReferenceID0" StoredValue="ItemUrl">
-                            <usau:BackupSlot.BackupValues>
-                              <scg:List x:TypeArguments="x:Object" x:Key="Browse" Capacity="6">
-                                <x:Null />
-                                <x:Null />
-                                <x:Null />
-                                <x:Null />
-                                <x:Null />
-                                <x:Null />
-                              </scg:List>
-                            </usau:BackupSlot.BackupValues>
-                          </usau:BackupSlot>
-                        </umafm:DriveItemArgument.ItemIdBackup>
-                      </umafm:DriveItemArgument>
-                    </umae:ReadRangeConnections.DriveItemArgument>
-                    <umae:ReadRangeConnections.TemplateArgument>
-                      <umafm:DriveItemArgument BrowserDriveId="{x:Null}" BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentDriveId="{x:Null}" BrowserParentDriveName="{x:Null}" BrowserParentItemFriendlyName="{x:Null}" BrowserParentItemId="{x:Null}" BrowserParentPath="{x:Null}" BrowserSiteUrl="{x:Null}" BrowserSpecificUrl="{x:Null}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Item="{x:Null}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntryItemUrl="{x:Null}" ManualEntrySiteUrl="{x:Null}" ReferenceId="{x:Null}" FullPathHint="" ItemSelectionMode="Browse" ParentFullPathHint="">
-                        <umafm:DriveItemArgument.ItemIdBackup>
-                          <usau:BackupSlot x:TypeArguments="umafe:EDriveItemMode" StoredValue="Browse">
-                            <usau:BackupSlot.BackupValues>
-                              <scg:Dictionary x:TypeArguments="umafe:EDriveItemMode, scg:List(x:Object)" />
-                            </usau:BackupSlot.BackupValues>
-                          </usau:BackupSlot>
-                        </umafm:DriveItemArgument.ItemIdBackup>
-                      </umafm:DriveItemArgument>
-                    </umae:ReadRangeConnections.TemplateArgument>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:String x:Key="bbbffa17-1024-47ac-a79a-41b860f664d0">Share</x:String>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </umae:ReadRangeConnections>
+                  <ui:RetryScope ContinueOnError="False" DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="452,548" sap2010:WorkflowViewState.IdRef="RetryScope_1" LogRetriedExceptions="True" NumberOfRetries="3" RetriedExceptionsLogLevel="Warn" RetryInterval="00:02:00">
+                    <ui:RetryScope.ActivityBody>
+                      <ActivityAction>
+                        <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="450,341" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <umae:ReadRangeConnections x:TypeArguments="sd:DataTable" BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentItemId="{x:Null}" BrowserSiteUrl="{x:Null}" ColumnNames="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ItemIdBackup="{x:Reference __ReferenceID0}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntrySiteUrl="{x:Null}" RangeInformation="{x:Null}" RangeMetadata="{x:Null}" TemplateBrowserDriveName="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" TemplateBrowserSiteUrl="{x:Null}" WorkbookSample="{x:Null}" AuthScopesInvalid="False" ConnectionId="b0fe217d-e89d-4be1-8ceb-33db9e950228" DisplayName="Read Range - Agency Data" HasHeaders="True" sap:VirtualizedContainerService.HintSize="416,281" sap2010:WorkflowViewState.IdRef="ReadRangeConnections`1_1" ItemSelectionMode="ItemUrl" ManualEntryItemUrl="[currentQueueItem.Output(&quot;Output Excel File URL&quot;).ToString]" Range="Allocation Upload" RangeMode="Default" ReadAs="Values" Result="[dtAgencydata]" UseConnectionService="True" WorkingWithTemplateWorkbook="False">
+                            <umae:ReadRangeConnections.DriveItemArgument>
+                              <umafm:DriveItemArgument BrowserDriveId="{x:Null}" BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentDriveId="{x:Null}" BrowserParentDriveName="{x:Null}" BrowserParentItemFriendlyName="{x:Null}" BrowserParentItemId="{x:Null}" BrowserParentPath="{x:Null}" BrowserSiteUrl="{x:Null}" BrowserSpecificUrl="{x:Null}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Item="{x:Null}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntrySiteUrl="{x:Null}" ReferenceId="{x:Null}" FullPathHint="" ItemSelectionMode="ItemUrl" ManualEntryItemUrl="[currentQueueItem.Output(&quot;Output Excel File URL&quot;).ToString]" ParentFullPathHint="">
+                                <umafm:DriveItemArgument.ItemIdBackup>
+                                  <usau:BackupSlot x:TypeArguments="umafe:EDriveItemMode" x:Name="__ReferenceID0" StoredValue="ItemUrl">
+                                    <usau:BackupSlot.BackupValues>
+                                      <scg:List x:TypeArguments="x:Object" x:Key="Browse" Capacity="6">
+                                        <x:Null />
+                                        <x:Null />
+                                        <x:Null />
+                                        <x:Null />
+                                        <x:Null />
+                                        <x:Null />
+                                      </scg:List>
+                                    </usau:BackupSlot.BackupValues>
+                                  </usau:BackupSlot>
+                                </umafm:DriveItemArgument.ItemIdBackup>
+                              </umafm:DriveItemArgument>
+                            </umae:ReadRangeConnections.DriveItemArgument>
+                            <umae:ReadRangeConnections.TemplateArgument>
+                              <umafm:DriveItemArgument BrowserDriveId="{x:Null}" BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentDriveId="{x:Null}" BrowserParentDriveName="{x:Null}" BrowserParentItemFriendlyName="{x:Null}" BrowserParentItemId="{x:Null}" BrowserParentPath="{x:Null}" BrowserSiteUrl="{x:Null}" BrowserSpecificUrl="{x:Null}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Item="{x:Null}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntryItemUrl="{x:Null}" ManualEntrySiteUrl="{x:Null}" ReferenceId="{x:Null}" FullPathHint="" ItemSelectionMode="Browse" ParentFullPathHint="">
+                                <umafm:DriveItemArgument.ItemIdBackup>
+                                  <usau:BackupSlot x:TypeArguments="umafe:EDriveItemMode" StoredValue="Browse">
+                                    <usau:BackupSlot.BackupValues>
+                                      <scg:Dictionary x:TypeArguments="umafe:EDriveItemMode, scg:List(x:Object)" />
+                                    </usau:BackupSlot.BackupValues>
+                                  </usau:BackupSlot>
+                                </umafm:DriveItemArgument.ItemIdBackup>
+                              </umafm:DriveItemArgument>
+                            </umae:ReadRangeConnections.TemplateArgument>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:String x:Key="bbbffa17-1024-47ac-a79a-41b860f664d0">Share</x:String>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </umae:ReadRangeConnections>
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:RetryScope.ActivityBody>
+                    <ui:RetryScope.Condition>
+                      <ActivityFunc x:TypeArguments="x:Boolean" />
+                    </ui:RetryScope.Condition>
+                  </ui:RetryScope>
                   <If Condition="[dtEMRData is Nothing]" DisplayName="If - Datatable is Empty" sap:VirtualizedContainerService.HintSize="452,455" sap2010:WorkflowViewState.IdRef="If_2">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">

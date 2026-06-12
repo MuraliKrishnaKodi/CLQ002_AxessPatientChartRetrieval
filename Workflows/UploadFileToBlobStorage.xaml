@@ -134,14 +134,14 @@
       <AssemblyReference>System.Private.Xml</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="TestAzureBlob" sap:VirtualizedContainerService.HintSize="1038,2395" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="TestAzureBlob" sap:VirtualizedContainerService.HintSize="1132,2383" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message - Connecting To Blob Storage Account" sap:VirtualizedContainerService.HintSize="562,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Connecting To Blob Storage Account...&quot;]" />
-    <Sequence DisplayName="Sequence - Uploading File Within Blob Storage" sap:VirtualizedContainerService.HintSize="562,2197" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence DisplayName="Sequence - Uploading File Within Blob Storage" sap:VirtualizedContainerService.HintSize="562,2185" sap2010:WorkflowViewState.IdRef="Sequence_4">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="StrAzureAppClientID" />
         <Variable x:TypeArguments="ss:SecureString" Name="SecStrAzureAppClientSecret" />
@@ -215,7 +215,7 @@
       </ui:MultipleAssign>
       <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="[In_DictConfig(&quot;AzureAppCredentialName&quot;).ToString]" CacheStrategy="None" DisplayName="Get Credential - Azure App Credential" sap:VirtualizedContainerService.HintSize="528,176" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[SecStrAzureAppClientSecret]" Username="[StrAzureAppClientID]" />
       <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="[In_DictConfig(&quot;StorageAccountCredentialName&quot;).ToString]" CacheStrategy="None" DisplayName="Get Credential - Storage Account Credential" sap:VirtualizedContainerService.HintSize="528,176" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2" Password="[SecStrStorageAccountAccessKey]" Username="[StrStorageAccountName]" />
-      <uaa:AzureScope2 ClientId="[StrAzureAppClientID]" ClientSecret="[SecStrAzureAppClientSecret]" DisplayName="Azure Scope" EnvironmentType="Global" sap:VirtualizedContainerService.HintSize="528,1458" sap2010:WorkflowViewState.IdRef="AzureScope2_1" SubscriptionId="[In_DictConfig(&quot;AzureAppSubscriptionID&quot;).ToString]" TenantId="[In_DictConfig(&quot;AzureAppTenantID&quot;).ToString]">
+      <uaa:AzureScope2 ClientId="[StrAzureAppClientID]" ClientSecret="[SecStrAzureAppClientSecret]" DisplayName="Azure Scope" EnvironmentType="Global" sap:VirtualizedContainerService.HintSize="528,1446" sap2010:WorkflowViewState.IdRef="AzureScope2_1" SubscriptionId="[In_DictConfig(&quot;AzureAppSubscriptionID&quot;).ToString]" TenantId="[In_DictConfig(&quot;AzureAppTenantID&quot;).ToString]">
         <uaa:AzureScope2.Body>
           <ActivityAction x:TypeArguments="uac:AzureCmd, uc:EnvironmentType">
             <ActivityAction.Argument1>
@@ -224,7 +224,7 @@
             <ActivityAction.Argument2>
               <DelegateInArgument x:TypeArguments="uc:EnvironmentType" Name="AzureEnvironmentTypePropertyTag" />
             </ActivityAction.Argument2>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="526,1180" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="526,1168" sap2010:WorkflowViewState.IdRef="Sequence_2">
               <Sequence.Variables>
                 <Variable x:TypeArguments="uam:StorageAccount" Name="StorageAccount" />
                 <Variable x:TypeArguments="uam:BlobContainer[]" Name="BlobContainerList" />
@@ -261,7 +261,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </uaa:AzureGetBlobContainerList>
-              <If Condition="[Not BlobContainerList.Where(Function(x) x.Name.Equals(In_DictConfig(&quot;BlobContainerName&quot;).ToString)).Count()  = 1]" DisplayName="If - Check If Target Blob Container Does Not Exists Within Retrieved  List Of Blob Container" sap:VirtualizedContainerService.HintSize="492,429" sap2010:WorkflowViewState.IdRef="If_1">
+              <If Condition="[Not BlobContainerList.Where(Function(x) x.Name.Equals(In_DictConfig(&quot;BlobContainerName&quot;).ToString)).Count()  = 1]" DisplayName="If - Check If Target Blob Container Does Not Exists Within Retrieved  List Of Blob Container" sap:VirtualizedContainerService.HintSize="492,421" sap2010:WorkflowViewState.IdRef="If_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -279,13 +279,13 @@
                   </Sequence>
                 </If.Then>
                 <If.Else>
-                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="490,116" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="490,108" sap2010:WorkflowViewState.IdRef="Sequence_6">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:LogMessage DisplayName="Log Message - Blob Container Determined Successfully" sap:VirtualizedContainerService.HintSize="456,52" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Blob container has been determined successfully&quot;]">
+                    <ui:LogMessage DisplayName="Log Message - Blob Container Determined Successfully" sap:VirtualizedContainerService.HintSize="456,48" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Blob container has been determined successfully&quot;]">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -320,7 +320,7 @@
                   <InArgument x:TypeArguments="x:String">[BlobObject.Uri]</InArgument>
                 </Assign.Value>
               </Assign>
-              <ui:LogMessage DisplayName="Log Message - File Got Uploaded Successfully To Blob Storage" sap:VirtualizedContainerService.HintSize="492,170" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;File got uploaded successfully to the blob storage with the following Uri: &quot;+out_StrBlobObjectUrl]" />
+              <ui:LogMessage DisplayName="Log Message - File Got Uploaded Successfully To Blob Storage" sap:VirtualizedContainerService.HintSize="492,166" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;File got uploaded successfully to the blob storage with the following Uri: &quot;+out_StrBlobObjectUrl]" />
             </Sequence>
           </ActivityAction>
         </uaa:AzureScope2.Body>
